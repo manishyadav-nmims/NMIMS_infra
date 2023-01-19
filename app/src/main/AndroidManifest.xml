@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nmims.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".Helpers.NMIMSApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_s"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_s"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".TimeTableCalendar.StudentWeekView"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".TimeTableCalendar.StudentTimeTable"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".TimeTableCalendar.WeekViewActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".TimeTableCalendar.TimeTableCalendar"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name=".Activities.RawQueryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.CheckFacultyLectureActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.StudentHostelHomeDrawer"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.FullTestDetailsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.TestDetailsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.SendDataActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.SchoolAttendanceDataCheckActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.FullUserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.FindDetailsByAdminActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.ResetPasswordByAdminActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.SupportAdminActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".Activities.ParentDrawer"
+            android:label="@string/title_activity_parent_drawer"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB9r-Z5a2ZHzXT8DaTNsaJOtcuAinRt_jY" />
+
+        <activity
+            android:name=".Activities.StudentDrawer"
+            android:label="@string/title_activity_student_drawer"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.FacultyDrawer"
+            android:label="@string/title_activity_faculty_drawer"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activities.MapsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <!--<activity
+            android:name=".Activities.OrientationActivity"
+            android:screenOrientation="landscape"
+            android:exported="true"/>-->
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Services.AttendanceSynService"
+            android:exported="true"/>
+        <service android:name=".Services.DeleteDatabaseService"
+            android:exported="true"/>
+        <service android:name=".Services.SendPendingAttendanceToFirebase"
+            android:exported="true"/>
+        <service android:name=".Services.SendLectureToFirebase"
+            android:exported="true"/>
+        <service android:name=".Services.SendPendingSurveyService"
+            android:exported="true"/>
+        <service
+            android:name=".Helpers.AttendanceNotificationExtender"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".Services.MyAlarmReceiver"
+            android:process=":remote"
+            android:exported="true"/>
+
+        <service
+            android:name=".Services.MyTestService"
+            android:exported="true"
+            android:foregroundServiceType="location" />
+        <uses-library
+            android:exported="true"
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <receiver
+            android:exported="true"
+            android:name="com.onesignal.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+            <!-- High priority so OneSignal payloads can be filtered from other GCM receivers if filterOtherGCMReceivers is enabled. -->
+            <intent-filter android:priority="999" >
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:exported="true"
+            android:name="com.onesignal.NotificationOpenedReceiver" />
+
+        <activity
+            android:exported="true"
+            android:name="com.onesignal.NotificationOpenedActivityHMS"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:exported="true"
+            android:name="com.onesignal.GcmIntentService" />
+
+
+        <service
+            android:exported="true"
+            android:name="com.onesignal.GcmIntentService" />
+        <service
+            android:exported="true"
+            android:name="com.onesignal.GcmIntentJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:exported="true"
+            android:name="com.onesignal.RestoreJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:exported="true"
+            android:name="com.onesignal.RestoreKickoffJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:exported="true"
+            android:name="com.onesignal.SyncService"
+            android:stopWithTask="true" />
+        <service
+            android:exported="true"
+            android:name="com.onesignal.SyncJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:exported="true"
+            android:name="com.onesignal.PermissionsActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:exported="true"
+            android:name="com.onesignal.NotificationRestoreService" />
+
+        <receiver
+            android:exported="true"
+            android:name="com.onesignal.BootUpReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:exported="true"
+            android:name="com.onesignal.UpgradeReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:exported="false"
+            android:name="com.google.firebase.components.ComponentDiscoveryService" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/markAttFrag"
+    android:background="#FFFFFF"
+
+    tools:context=".Fragments.Academic.MarkAttendanceFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:elevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/course_detailsViewer"
+                    android:background="@drawable/reactangular_box_non_corner_black"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/lectureDetails"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/reactangular_box_non_corner_extra_flamishred">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:text="Lecture Details" />
+
+                        <ImageView
+                            android:id="@+id/lectureDetailsImg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/expand"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/lectureTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorBlack"
+                        android:paddingBottom="5dp"
+                        android:text="lectureTime" />
+
+                    <TextView
+                        android:id="@+id/program_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textColor="@color/colorBlack"
+                        android:background="@color/colorLightGrey"
+                        android:text="programName"/>
+
+                    <TextView
+                        android:id="@+id/course_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_below="@+id/program_name"
+                        android:text="courseName"/>
+
+                    <TextView
+                        android:id="@+id/allotedLectures_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/course_name"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textColor="@color/colorBlack"
+                        android:background="@color/colorLightGrey"
+                        android:text="Allocated Lectures"/>
+
+                    <TextView
+                        android:id="@+id/conductedLectures_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/allotedLectures_TV"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Conducted Lectures"/>
+
+                    <TextView
+                        android:id="@+id/remainingLectures_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/conductedLectures_TV"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textColor="@color/colorBlack"
+                        android:background="@color/colorLightGrey"
+                        android:layout_marginBottom="4dp"
+                        android:text="Remaining Lectures"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/saveContainer"
+                    android:layout_below="@+id/course_detailsViewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginBottom="2dp">
+
+                    <CheckBox
+                        android:id="@+id/allAbsent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:layout_marginTop="4dp"
+                        android:layout_toLeftOf="@+id/saveButton"
+                        android:layout_centerVertical="true"
+                        android:text="Absent All Student" />
+
+                    <Button
+                        android:id="@+id/openFacBtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/reactangular_box_solid_black"
+                        android:text="Faculty" />
+
+
+                    <Button
+                        android:id="@+id/saveButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/reactangular_box_solid_black"
+                        android:text="Save" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/saveContainer"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/reactangular_box">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/search_student" />
+
+                    <Button
+                        android:id="@+id/cancelSearchStudentBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/cancel"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/searchStudentEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginRight="45dp"
+                        android:alpha="0.8"
+                        android:background="@android:color/transparent"
+                        android:hint="Search Student"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorDarkGrey"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/studentTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:id="@+id/headerRow"
+                    android:background="@drawable/border_bottom">
+
+                    <TextView
+                        android:id="@+id/student_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:padding="5dp"
+                        android:text="Name"
+                        android:textColor="#000"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/student_sapid"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:padding="5dp"
+                        android:text="Sap Id"
+                        android:textColor="#000"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/student_rollno"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75"
+                        android:padding="5dp"
+                        android:text="Roll No"
+                        android:textColor="#000"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/student_absent_present"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75"
+                        android:padding="5dp"
+                        android:text="Status"
+                        android:textColor="#000"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layoutAnimation="@anim/layout_animation"
+                android:background="@drawable/border_bottom"
+                android:paddingBottom="10dp">
+            </ListView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/emptyResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <TextView
+        android:id="@+id/emptySearchResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="gone"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

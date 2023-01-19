@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/containerData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+       <!-- <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:headerColor="@color/colorPrimary"
+            />-->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:id="@+id/noDataFoundTv"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="4dp"
+            android:text="No Data Found"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:visibility="gone"
+            android:textColor="@color/colorDarkGrey"/>
+
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context=".Fragments.Academic.StudentTimeTableFragment">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:scrollbars="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="D/T"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            android:background="@color/colorBlue"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="Monday"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/reactangular_box_non_corner_black"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="Tuesday"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/reactangular_box_non_corner_black"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="Wednesday"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/reactangular_box_non_corner_black"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="Thrusday"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/reactangular_box_non_corner_black"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="Friday"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/reactangular_box_non_corner_black"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="Saturday"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/reactangular_box_non_corner_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/flamishYellow"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutMon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutTue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutWed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutThu"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutFri"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutSat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>-->

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingTop="4dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/student_course_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="18dp"
+        android:text="Research Methodology"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/student_course_name"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/linear_equal_gap_style">
+
+            <TextView
+                android:id="@+id/lecturetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:alpha="0.8"
+                android:text="NO. OF LECTURE"/>
+
+            <TextView
+                android:id="@+id/student_lecture_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="35dp"
+                android:layout_below="@+id/lecturetitle"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="4dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="4dp"
+                android:background="@drawable/circle_lecture_count"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/linear_equal_gap_style">
+
+            <TextView
+                android:id="@+id/presenttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:alpha="0.8"
+                android:text="PRESENT"/>
+
+            <TextView
+                android:id="@+id/student_present_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="12dp"
+                android:layout_below="@+id/presenttitle"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="4dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="4dp"
+                android:background="@drawable/circle_present_count"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/linear_equal_gap_style">
+
+            <TextView
+                android:id="@+id/absenttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:alpha="0.8"
+                android:text="ABSENT"/>
+
+            <TextView
+                android:id="@+id/student_absent_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/absenttitle"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="4dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="4dp"
+                android:background="@drawable/circle_absent_count"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

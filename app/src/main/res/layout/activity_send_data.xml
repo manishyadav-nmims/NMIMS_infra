@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".Activities.SendDataActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinnerSchoolList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/sendDataType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/darkBluishGrey"
+            android:padding="10dp"
+            android:text="Send Attendance For Specific Lecture"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/note_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="10dp"
+            android:text="Date Format : YYYY-MM-DD HH-mm-ss"
+            android:textStyle="bold"
+            android:background="@drawable/round_corner_button_grey"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/chooseDateSD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Enter Date"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/colorBlack" />
+        <CheckBox
+            android:id="@+id/confirmDataSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:button="@drawable/check_box_selector"
+            android:text=" Please Check the box to Confirm Details"
+            android:textColor="#000000" />
+        <Button
+            android:id="@+id/sendAttDataBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/round_corner_button_grey"
+            android:enabled="false"
+            android:text="Send Data"
+            android:textColor="@color/colorDarkGrey" />
+
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spinnerSchoolList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="180dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/chooseDateSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:hint="Enter Date"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/sendDataType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerSchoolList"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/darkBluishGrey"
+                android:padding="10dp"
+                android:text="SEND PREVIOUS"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/note_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerSchoolList"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:background="#ffd700"
+                android:padding="10dp"
+                android:text="Date Format : YYYY-MM-DD HH-mm-ss"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <CheckBox
+                android:id="@+id/confirmDataSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/note_"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:button="@drawable/check_box_selector"
+                android:text="Confirm"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/sendAttDataBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/note_"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_corner_button_grey"
+                android:enabled="false"
+                android:text="Send Data"
+                android:textColor="@color/colorDarkGrey" />-->
+
+        <LinearLayout
+            android:id="@+id/responseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sendAttDataBtn"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:scrollbars="vertical"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:background="@drawable/reactangular_box_non_corner_black"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/responseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Response"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/attendResponseTV"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlack"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

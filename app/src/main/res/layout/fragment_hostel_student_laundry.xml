@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".Fragments.Hostel.HostelStudentLaundryFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/reactangular_box_non_corner_bluishdarkgrey">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/addLaundryTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="20dp"
+                            android:background="@color/darkBluishGrey"
+                            android:textColor="@color/colorWhite"
+                            android:text="ADD LAUNDRY ITEMS          -"/>
+
+                        <View
+                            android:id="@+id/lineBelowAddLaundryTV"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/addLaundryTV"
+                            android:background="@color/darkBluishGrey"
+                            android:layout_height="2dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutAddLaundry"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            android:layout_below="@+id/lineBelowAddLaundryTV"
+                            android:layout_marginTop="8dp"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/laundryItemTableList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/rectangle_upper_round"
+                                android:padding="5dp">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="0dp"
+                                    android:stretchColumns="*"
+                                    android:paddingBottom="5dp">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.12"
+                                            android:padding="5dp"
+                                            android:text="Sl No."
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.4"
+                                            android:padding="5dp"
+                                            android:text="Item Name"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.3"
+                                            android:padding="5dp"
+                                            android:text="Item Type"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.18"
+                                            android:padding="5dp"
+                                            android:text="Quantity"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                    </TableRow>
+                                </TableLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/addNewItemLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/laundryItemTableList">
+
+                                <TableLayout
+                                    android:id="@+id/student_shh_laundryTable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="0dp"
+                                    android:stretchColumns="*"
+                                    android:layout_marginTop="5dp"
+                                    android:paddingBottom="5dp">
+
+                                    <TableRow
+                                        android:id="@+id/student_shh_laundryRow"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/reactangular_box_non_corner_extradull"
+                                        android:padding="5dp"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:id="@+id/sl_no"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.15"
+                                            android:padding="5dp"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="12dp" />
+
+                                        <EditText
+                                            android:id="@+id/item_name"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.4"
+                                            android:padding="5dp"
+                                            android:textColor="@color/colorBlack"
+                                            android:background="@color/colorWhite"
+                                            android:textSize="12dp" />
+
+                                        <Spinner
+                                            android:id="@+id/spinner_item_type"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.3"
+                                            android:padding="5dp"
+                                            android:overlapAnchor="false"
+                                            android:popupBackground="@color/colorLightGrey"
+                                            android:spinnerMode="dropdown" />
+
+                                        <EditText
+                                            android:id="@+id/item_quantity"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.15"
+                                            android:padding="5dp"
+                                            android:inputType="number"
+                                            android:background="@color/colorWhite"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="12dp"/>
+
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/btnsLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="12dp"
+                                android:layout_below="@+id/addNewItemLayout">
+
+                                <Button
+                                    android:id="@+id/studentLaundryAddNewItemBtn"
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:background="@color/darkBluishGrey"
+                                    android:textSize="12dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:text=" + Add New Item"/>
+
+                                <Button
+                                    android:id="@+id/studentLaundrySubmitBtn"
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textSize="12dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/parrotGreen"
+                                    android:textColor="@color/colorWhite"
+                                    android:text="Submit"/>
+
+                            </RelativeLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/studentLaundryItemRecyclerView_add_ssh"
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/btnsLayout"
+                                android:layout_height="wrap_content">
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/showLaundryItemsTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/reactangular_box_non_corner_bluishdarkgrey"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/viewLaundryTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="20dp"
+                            android:background="@color/darkBluishGrey"
+                            android:textColor="@color/colorWhite"
+                            android:text="VIEW LAUNDRY ITEMS          +"/>
+
+
+                        <View
+                            android:id="@+id/lineBelowViewLaundryTV"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/viewLaundryTV"
+                            android:background="@color/darkBluishGrey"
+                            android:layout_height="2dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutViewLaundry"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/lineBelowViewLaundryTV"
+                            android:visibility="gone"
+                            android:layout_marginTop="8dp"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/ViewlaundryItemTableList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/rectangle_upper_round"
+                                android:padding="5dp">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="0dp"
+                                    android:stretchColumns="*"
+                                    android:paddingBottom="5dp">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.12"
+                                            android:padding="5dp"
+                                            android:text="Sl No."
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.4"
+                                            android:padding="5dp"
+                                            android:text="Item Name"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.3"
+                                            android:padding="5dp"
+                                            android:text="Item Type"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.18"
+                                            android:padding="5dp"
+                                            android:text="Quantity"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                    </TableRow>
+                                </TableLayout>
+
+                            </LinearLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/studentLaundryItemRecyclerView_ssh"
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/ViewlaundryItemTableList"
+                                android:layout_height="wrap_content">
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

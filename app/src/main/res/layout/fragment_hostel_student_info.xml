@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/colorDullWhite"
+    tools:context=".Fragments.Hostel.HostelStudentInfoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="12dp"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/studentSapId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAP ID"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentSapId"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="50dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/studentSapIdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/studentSapId"
+                android:layout_marginLeft="70dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:text="############"/>
+
+            <TextView
+                android:id="@+id/studentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentSapId"
+                android:text="Name"
+                android:layout_marginTop="8dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentName"
+                android:layout_marginTop="28dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="57dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/studentNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/studentName"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="78dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:text="Kapil *****"/>
+
+            <TextView
+                android:id="@+id/studentContactNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentName"
+                android:text="Contact No"
+                android:layout_marginTop="8dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentContactNo"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="57dp"
+                android:layout_marginLeft="19dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/studentContactNoValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/studentName"
+                android:layout_marginTop="57dp"
+                android:layout_marginLeft="78dp"
+                android:background="@drawable/edittext_transparent_background"
+                android:inputType="none"
+                android:enabled="false"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:text="1234567890"/>
+
+            <TextView
+                android:id="@+id/studentEmailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentContactNo"
+                android:text="Email ID"
+                android:layout_marginTop="8dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentContactNo"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="86dp"
+                android:layout_marginLeft="19dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/studentEmailIdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/studentName"
+                android:layout_marginTop="86dp"
+                android:layout_marginLeft="78dp"
+                android:background="@drawable/edittext_transparent_background"
+                android:inputType="none"
+                android:enabled="false"
+                android:textColor="@color/colorBlack"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="16dp"
+                android:text="kapil####@gmail.com"/>
+
+            <TextView
+                android:id="@+id/studentPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentEmailId"
+                android:text="Photo"
+                android:layout_marginTop="8dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentContactNo"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="116dp"
+                android:layout_marginLeft="19dp"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/studentProfilePic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/student_profile"
+                android:scaleType="centerCrop"
+                android:layout_toRightOf="@+id/studentPhoto"
+                android:layout_marginLeft="77dp"
+                android:layout_marginTop="120dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/i"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/studentProfilePic"/>
+
+            <LinearLayout
+                android:id="@+id/chooseStudentPic"
+                android:layout_width="100dp"
+                android:layout_height="24dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/studentProfilePic"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="120dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/choose_pic"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10dp"
+                    android:text="Choose a file..."/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/imgInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passport image 3.5cm x 4.5cm"
+                android:layout_marginTop="145dp"
+                android:ellipsize="end"
+                android:textSize="11dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/studentProfilePic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image size : 50kb to 150kb"
+                android:layout_below="@+id/imgInfo"
+                android:ellipsize="end"
+                android:textSize="11dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/studentProfilePic"/>
+
+
+            <TextView
+                android:id="@+id/studentSignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentProfilePic"
+                android:text="Signature"
+                android:layout_marginTop="40dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentSignature"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/studentSignatureImg"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/studentSignature"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="260dp"
+                android:src="@drawable/sign"/>
+
+            <LinearLayout
+                android:id="@+id/chooseStudentSignaturePic"
+                android:layout_width="100dp"
+                android:layout_height="24dp"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@+id/studentSignature"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="262dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/choose_pic"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10dp"
+                    android:text="Choose a file..."/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/imgInfotext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentSignature"
+                android:text="Image size : 50kb to 150kb"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="120dp"
+                android:ellipsize="end"
+                android:textSize="11dp"/>
+
+
+            <TextView
+                android:id="@+id/studentHostelNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentSignature"
+                android:text="Hostel Room No"
+                android:layout_marginTop="45dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentHostelNo"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="327dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/studentHostelNoValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/studentHostelNo"
+                android:layout_marginTop="328dp"
+                android:layout_marginLeft="58dp"
+                android:textColor="@color/colorBlack"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="16dp"
+                android:text="78A"/>
+
+            <TextView
+                android:id="@+id/studentCorrespondanceAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentHostelNo"
+                android:text="Correspondance Address"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentCorrespondanceAddress"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="360dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/studentCorrespondanceAddressValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example Address here"
+                android:maxLines="4"
+                android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:layout_toRightOf="@+id/studentCorrespondanceAddress"
+                android:layout_marginTop="385dp"
+                android:background="@drawable/edittext_transparent_background"
+                android:inputType="none"
+                android:enabled="false"
+                android:textColor="@color/colorBlack"
+                android:textStyle="italic"
+                android:layout_marginLeft="-80dp"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/studentPermanentAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/studentCorrespondanceAddressValue"
+                android:text="Permanent Address"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_toRightOf="@+id/studentPermanentAddress"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="410dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/studentPermanentAddressValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example Address here"
+                android:maxLines="4"
+                android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:background="@drawable/edittext_transparent_background"
+                android:inputType="none"
+                android:enabled="false"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/studentPermanentAddress"
+                android:layout_below="@+id/studentCorrespondanceAddressValue"
+                android:layout_marginTop="25dp"
+                android:textStyle="italic"
+                android:layout_marginLeft="-45dp"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</FrameLayout>

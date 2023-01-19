@@ -1,0 +1,93 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]'
+        classpath 'io.fabric.tools:gradle:1.31.0'
+
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.nmims.app"
+        minSdkVersion 26
+        targetSdkVersion 31
+        versionCode 227
+        versionName "1.3.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+        manifestPlaceholders = [
+                onesignal_app_id               : '2d46e24e-fb33-43aa-ad6e-fde6940c28ff',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: '630915648582'
+        ]
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    //implementation 'androidx.appcompat:appcompat:1.0.2'
+
+    implementation 'androidx.core:core-ktx:1.1.0-alpha04'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.fragment:fragment:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.firebase:firebase-client-android:2.3.1'
+    //implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //implementation 'com.applandeo:material-calendar-view:1.4.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
+        transitive = true
+    }
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+}

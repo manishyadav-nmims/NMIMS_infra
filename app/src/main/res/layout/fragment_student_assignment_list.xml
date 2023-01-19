@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/swipe_containerAssignment"
+    tools:context=".Fragments.Academic.StudentAssignmentListFragment">
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/studDetFrag">
+
+       <ListView
+           android:id="@+id/listView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layoutAnimation="@anim/layout_animation"
+           android:layout_margin="5dp"
+           android:layout_marginTop="10dp">
+       </ListView>
+
+       <ImageView
+           android:id="@+id/errorImage"
+           android:layout_width="115dp"
+           android:layout_height="115dp"
+           android:layout_centerInParent="true"
+           android:visibility="gone"
+           android:src="@drawable/no_data"/>
+
+       <TextView
+           android:id="@+id/emptyResults"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_below="@+id/errorImage"
+           android:alpha="0.5"
+           android:textAlignment="center"
+           android:textSize="16dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:textColor="#000000" />
+
+
+       <ProgressBar
+           android:id="@+id/progressBar"
+           style="?android:attr/progressBarStyle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true" />
+
+   </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

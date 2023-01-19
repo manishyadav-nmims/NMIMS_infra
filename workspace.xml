@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidGradleBuildConfiguration">
+    <option name="COMMAND_LINE_OPTIONS" value="--stacktrace --debug" />
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" not_id="6eefaf3e-6083-45fa-b949-8859a7782261" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Activities/CampusMapActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Models/CampusMarkerDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_campus_map.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/StudentHomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/StudentHomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system not_id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="nmims_native_android" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-not_id="text-editor">
+            <state relative-caret-position="590">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradle.properties">
+          <provider selected="true" editor-type-not_id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>attendanceLayout</find>
+      <find>stringRequest</find>
+      <find>mRequestBody</find>
+      <find>programlistvaProgressBar</find>
+      <find>FragmentTransaction</find>
+      <find>sharedPrefschoolName</find>
+      <find>ProgramListVA</find>
+      <find>Bundle</find>
+      <find>emptyText</find>
+      <find>getLectureList</find>
+      <find>getApplicationContext()</find>
+      <find>getApplicationContext(</find>
+      <find>view</find>
+      <find>requestQueue</find>
+      <find>progressBar</find>
+      <find>listView</find>
+      <find>supportic</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Shubham" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="OneSignalIntegration" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/lectures_list_new.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/lectures_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/LecturesListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/LecturesListAdapterMA.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/LecturesListAdapterVA.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/FacultyAttendanceFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/program_list_va_fragment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_courses.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/ProgramListVARecyclerviewAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Helpers/Config.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Models/LecturesDataModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/CoursesListRecyclerviewAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/ProgramListVAFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/CoursesFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_mark_attendance_lecture.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Helpers/NMIMSApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/program_and_course_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/StudentViewAttendanceFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_view_attendance.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_view_attendance_lecture.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/ProgramListAdapterVA.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/ViewAttendanceFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_support.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/DatePickerFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/ViewAttendanceLectureFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Activities/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/MarkAttendanceFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/MarkAttendanceLectureFragment.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Models/CampusMarkerDataModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_campus_map.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/CampusMapFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Activities/CampusMapActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/StudentHomeFragment.java" />
+        <option value="$PROJECT_DIR$/gradle.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-136" />
+    <option name="y" value="85" />
+    <option name="width" value="1612" />
+    <option name="height" value="912" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" not_id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages AndroidView="false" />
+      <showMembers AndroidView="false" />
+      <hideEmptyPackages AndroidView="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane not_id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="nmims_native_android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="nmims_native_android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane not_id="Scope" />
+      <pane not_id="PackagesPane" />
+      <pane not_id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.developerphil.adbidea.selecteddevices" value="60a268ae" />
+    <property name="device.picker.selection" value="60a268ae" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="settings.editor.selected.configurable" value="gradle.compiler" />
+    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.4.1" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.nmims.app.Activities" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nmims.app.Adapters" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Shubhs\NMIMS_nativeNew\nmims_native_android\app\src\main\res\drawable-v24" />
+      <recent name="F:\Shubhs\NMIMS_nativeNew\nmims_native_android\app\src\main\res\layout" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" not_id="Default" summary="Default task">
+      <changelist not_id="6eefaf3e-6083-45fa-b949-8859a7782261" name="Default Changelist" comment="" />
+      <created>1563431633422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563431633422</updated>
+    </task>
+    <task not_id="LOCAL-00001" summary="Design of MarkAttendance And ViewAttendance is done">
+      <created>1563441042128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563441042128</updated>
+    </task>
+    <task not_id="LOCAL-00002" summary="Design of MarkAttendance And ViewAttendance is done">
+      <created>1563453030183</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1563453030183</updated>
+    </task>
+    <task not_id="LOCAL-00003" summary="CoursesList done">
+      <created>1563518137376</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563518137376</updated>
+    </task>
+    <task not_id="LOCAL-00004" summary="LectureList Done">
+      <created>1563524020729</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563524020729</updated>
+    </task>
+    <task not_id="LOCAL-00005" summary="LectureList Improvement">
+      <created>1563535014187</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1563535014187</updated>
+    </task>
+    <task not_id="LOCAL-00006" summary="LectureList Improvement1">
+      <created>1563535496435</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1563535496435</updated>
+    </task>
+    <task not_id="LOCAL-00007" summary="Attendace Page is getting opned now">
+      <created>1563601577441</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563601577441</updated>
+    </task>
+    <task not_id="LOCAL-00008" summary="Attendace Page is getting opned now">
+      <created>1563601718767</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1563601718767</updated>
+    </task>
+    <task not_id="LOCAL-00009" summary="Attendace Page is getting opned now">
+      <created>1563603647626</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563603647626</updated>
+    </task>
+    <task not_id="LOCAL-00010" summary="Improving Code">
+      <created>1563606389606</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563606389606</updated>
+    </task>
+    <task not_id="LOCAL-00011" summary="Improving Code">
+      <created>1563616167067</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563616167067</updated>
+    </task>
+    <task not_id="LOCAL-00012" summary="AndroidX  Migration Sucessfull">
+      <created>1563618223346</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563618223346</updated>
+    </task>
+    <task not_id="LOCAL-00013" summary="AndroidX  Migration Sucessfull improved">
+      <created>1563619913709</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563619913710</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel not_id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel not_id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info not_id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" not_id="Project" order="1" sideWeight="0.49798116" visible="true" weight="0.2506427" />
+      <window_info not_id="Structure" order="2" sideWeight="0.50201887" side_tool="true" weight="0.23714653" />
+      <window_info not_id="Favorites" order="3" side_tool="true" />
+      <window_info not_id="Build Variants" order="4" side_tool="true" />
+      <window_info not_id="Image Layers" order="5" />
+      <window_info not_id="Designer" order="6" />
+      <window_info not_id="Resources Explorer" order="7" sideWeight="0.50201887" side_tool="true" weight="0.21658097" />
+      <window_info not_id="Capture Tool" order="8" />
+      <window_info anchor="bottom" not_id="Run" order="0" />
+      <window_info anchor="bottom" not_id="Logcat" order="1" sideWeight="0.9196658" weight="0.48990577" />
+      <window_info anchor="bottom" not_id="TODO" order="2" weight="0.32974428" />
+      <window_info anchor="bottom" not_id="Debug" order="3" weight="0.36473754" />
+      <window_info anchor="bottom" not_id="Terminal" order="4" sideWeight="0.4993573" weight="0.32974428" />
+      <window_info anchor="bottom" not_id="Event Log" order="5" sideWeight="0.14138818" side_tool="true" weight="0.39300135" />
+      <window_info anchor="bottom" not_id="Version Control" order="6" weight="0.6352624" />
+      <window_info anchor="bottom" not_id="Build" order="7" sideWeight="0.8586118" weight="0.39300135" />
+      <window_info anchor="bottom" not_id="Android Profiler" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" not_id="Find" order="9" weight="0.32974428" />
+      <window_info anchor="bottom" not_id="Messages" order="10" />
+      <window_info anchor="right" not_id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" not_id="Capture Analysis" order="1" />
+      <window_info anchor="right" not_id="Gradle" order="2" weight="0.32969153" />
+      <window_info anchor="right" not_id="Theme Preview" order="3" />
+      <window_info anchor="right" not_id="Preview" order="4" weight="0.25835475" />
+      <window_info anchor="right" not_id="Palette&#9;" order="5" />
+      <window_info anchor="right" not_id="Codota" order="6" />
+      <window_info anchor="right" not_id="Assistant" order="7" visible="true" weight="0.33419022" />
+    </layout>
+    <layout-to-restore>
+      <window_info not_id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" not_id="Project" order="1" sideWeight="0.49798116" visible="true" weight="0.2506427" />
+      <window_info not_id="Structure" order="2" sideWeight="0.50201887" side_tool="true" weight="0.23714653" />
+      <window_info not_id="Favorites" order="3" side_tool="true" />
+      <window_info not_id="Build Variants" order="4" side_tool="true" />
+      <window_info not_id="Image Layers" order="5" />
+      <window_info not_id="Designer" order="6" />
+      <window_info not_id="Resources Explorer" order="7" sideWeight="0.50201887" side_tool="true" weight="0.21658097" />
+      <window_info not_id="Capture Tool" order="8" />
+      <window_info anchor="bottom" not_id="Run" order="0" />
+      <window_info anchor="bottom" not_id="Logcat" order="1" sideWeight="0.9196658" weight="0.48990577" />
+      <window_info anchor="bottom" not_id="TODO" order="2" weight="0.32974428" />
+      <window_info anchor="bottom" not_id="Debug" order="3" weight="0.36473754" />
+      <window_info anchor="bottom" not_id="Terminal" order="4" sideWeight="0.4993573" weight="0.32974428" />
+      <window_info anchor="bottom" not_id="Event Log" order="5" sideWeight="0.14138818" side_tool="true" weight="0.39300135" />
+      <window_info anchor="bottom" not_id="Version Control" order="6" weight="0.6352624" />
+      <window_info anchor="bottom" not_id="Build" order="7" sideWeight="0.8586118" weight="0.39300135" />
+      <window_info anchor="bottom" not_id="Android Profiler" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" not_id="Find" order="9" weight="0.32974428" />
+      <window_info anchor="bottom" not_id="Messages" order="10" />
+      <window_info anchor="right" not_id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" not_id="Capture Analysis" order="1" />
+      <window_info anchor="right" not_id="Gradle" order="2" weight="0.32969153" />
+      <window_info anchor="right" not_id="Theme Preview" order="3" />
+      <window_info anchor="right" not_id="Preview" order="4" weight="0.25835475" />
+      <window_info anchor="right" not_id="Palette&#9;" order="5" />
+      <window_info anchor="right" not_id="Codota" order="6" />
+      <window_info anchor="right" not_id="Assistant" order="7" visible="true" weight="0.33419022" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="Design of MarkAttendance And ViewAttendance is done" />
+    <MESSAGE value="CoursesList done" />
+    <MESSAGE value="LectureList Done" />
+    <MESSAGE value="LectureList Improvement" />
+    <MESSAGE value="LectureList Improvement1" />
+    <MESSAGE value="Attendace Page is getting opned now" />
+    <MESSAGE value="Improving Code" />
+    <MESSAGE value="AndroidX  Migration Sucessfull" />
+    <MESSAGE value="AndroidX  Migration Sucessfull improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="AndroidX  Migration Sucessfull improved" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions not_id="evaluateExpression">
+      <expression>
+        <expression-string>data.getStringExtra(&quot;selectedDate&quot;)</expression-string>
+        <language-not_id>JAVA</language-not_id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>jsonObject</expression-string>
+        <language-not_id>JAVA</language-not_id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>bundle.getString(&quot;programId&quot;)</expression-string>
+        <language-not_id>JAVA</language-not_id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>programId</expression-string>
+        <language-not_id>JAVA</language-not_id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>lecturesDataModelList.get(getAdapterPosition()).getProgramId()</expression-string>
+        <language-not_id>JAVA</language-not_id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Helpers/Config.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/view/View.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/ProgramListVARecyclerviewAdapter.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/ProgramListVAFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="126" column="62" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mark_attendance_lecture.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/os/Bundle.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/CoursesListRecyclerviewAdapter.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/BaseAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/program_and_course_list.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/LecturesListAdapterMA.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/FacultyAttendanceFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/AdapterView.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_view_attendance.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mark_attendance.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Helpers/NMIMSApplication.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/CoursesFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_view_attendance_lecture.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/ProgramListAdapterVA.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
+          <folding>
+            <element signature="e#2340#2524#0" expanded="true" />
+            <element signature="e#2523#2524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/ViewAttendanceFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="-1158">
+          <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/FacultyViewAttendanceListAdapter.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="-175">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_support.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/SupportFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Adapters/StudentViewAttendanceListAdapter.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="39" column="62" lean-forward="true" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/StudentViewAttendanceFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="-2246">
+          <caret line="103" column="65" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/DatePickerFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="44" column="58" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/TextView.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Models/LecturesDataModel.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_student_drawer.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_faculty_drawer.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_student_drawer.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_student_drawer.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Activities/StudentDrawer.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/ViewAttendanceLectureFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Activities/LoginActivity.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="108" column="97" selection-start-line="108" selection-start-column="97" selection-end-line="108" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/MarkAttendanceFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="6358">
+          <caret line="419" column="40" selection-start-line="419" selection-start-column="40" selection-end-line="419" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/MarkAttendanceLectureFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="95" column="71" selection-start-line="95" selection-start-column="71" selection-end-line="95" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Models/CampusMarkerDataModel.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f25fb519203474ca2e0ecc4213c080c/jars/classes.jar!/com/google/android/gms/maps/MapView.class" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/CampusMapFragment.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_campus_map.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="128" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_student_drawer.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-not_id="android-manifest" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="44" column="52" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Activities/CampusMapActivity.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_student_home.xml">
+      <provider editor-type-not_id="android-designer2" />
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/nmimsapp/Fragments/StudentHomeFragment.java">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="84" column="80" lean-forward="true" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
+          <folding>
+            <element signature="e#4269#4703#0" expanded="true" />
+            <element signature="e#4702#4703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-not_id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-not_id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

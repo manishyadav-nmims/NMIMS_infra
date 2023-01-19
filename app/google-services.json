@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "630915648582",
+    "firebase_url": "https://nmimsapp.firebaseio.com",
+    "project_id": "nmimsapp",
+    "storage_bucket": "nmimsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630915648582:android:c49d2c45e6e8a0fa",
+        "android_client_info": {
+          "package_name": "com.nmims.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630915648582-lvmn7i7fojcdkdvh7d6u8ooi9pg5v13v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nmims.app",
+            "certificate_hash": "2badb60404dae6b28e83b78160e047513819c291"
+          }
+        },
+        {
+          "client_id": "630915648582-1hi0mb3l31mpqs6pk6j593ppnfeptpgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY1WECCTOt1kmuZDQVD_0r8_VN4yo6dww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630915648582-1hi0mb3l31mpqs6pk6j593ppnfeptpgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

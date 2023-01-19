@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/colorDullWhite"
+    tools:context=".Fragments.Hostel.HostelStudent_ParentInfoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-20dp"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/fathersName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Father's Name :"
+                    android:layout_marginTop="45dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/fathersNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mr. xyz"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_toRightOf="@+id/fathersName"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/mothersName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mother's Name :"
+                    android:layout_marginTop="45dp"
+                    android:layout_below="@+id/fathersNameValue"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/mothersNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mrs. xyz"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_below="@+id/fathersNameValue"
+                    android:layout_toRightOf="@+id/mothersName"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorBlack"/>
+
+
+                <TextView
+                    android:id="@+id/parentPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mothersNameValue"
+                    android:text="Photo"
+                    android:layout_marginTop="45dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_below="@+id/mothersNameValue"
+                    android:layout_toEndOf="@+id/parentPhoto"
+                    android:text=":"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/fatherPic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/father_pic"
+                    android:layout_below="@+id/mothersNameValue"
+                    android:layout_toRightOf="@+id/parentPhoto"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="80dp"/>
+
+                <ImageView
+                    android:id="@+id/motherPic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/mother_pic"
+                    android:layout_below="@+id/mothersNameValue"
+                    android:layout_toRightOf="@+id/fatherPic"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:id="@+id/parent_i"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/i"
+                    android:layout_below="@id/fatherPic"
+                    android:layout_toRightOf="@+id/parentPhoto"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/imginfo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:text="Passport image 3.5cm x 4.5cm"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/parent_i"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/fatherPic"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imginfo1"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="visible"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/parent_i"
+                    android:text="Image size : 50kb to 150kb"/>
+
+                <TextView
+                    android:id="@+id/fatherSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info2"
+                    android:text="Father's Sign"
+                    android:layout_marginTop="30dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_toRightOf="@+id/fatherSign"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/info2"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@+id/parentPhoto"
+                    android:layout_marginLeft="65dp"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/FatherSignImg"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/sign"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/fatherSign"
+                    android:layout_marginLeft="35dp"
+                    android:layout_below="@+id/info2"/>
+
+                <LinearLayout
+                    android:id="@+id/chooseFatherSign"
+                    android:layout_width="100dp"
+                    android:layout_height="24dp"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/FatherSignImg"
+                    android:layout_below="@+id/info2"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/choose_pic"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp"
+                        android:text="Choose a file..."/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/motherSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fatherSign"
+                    android:text="Mother's Sign"
+                    android:layout_marginTop="25dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_toRightOf="@+id/fatherSign"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/fatherSign"
+                    android:layout_marginTop="25dp"
+                    android:layout_toEndOf="@+id/parentPhoto"
+                    android:layout_marginLeft="65dp"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/MotherSignImg"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/sign"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@+id/motherSign"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/FatherSignImg"/>
+
+                <LinearLayout
+                    android:id="@+id/chooseMotherSign"
+                    android:layout_width="100dp"
+                    android:layout_height="24dp"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/FatherSignImg"
+                    android:layout_below="@+id/chooseFatherSign"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/choose_pic"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp"
+                        android:text="Choose a file..."/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/i"
+                    android:layout_toRightOf="@+id/motherSign"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/MotherSignImg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Image size : 50kb to 150kb"
+                    android:layout_below="@+id/MotherSignImg"
+                    android:layout_toRightOf="@+id/motherSign"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/parentContactNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/motherSign"
+                    android:text="Contact No."
+                    android:layout_marginTop="50dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_toRightOf="@+id/fatherSign"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/motherSign"
+                    android:layout_marginTop="50dp"
+                    android:layout_toEndOf="@+id/parentPhoto"
+                    android:layout_marginLeft="65dp"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/fatherContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Father's Contact"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/parentContactNo"
+                    android:layout_marginLeft="50dp"
+                    android:layout_below="@+id/motherSign"
+                    android:layout_marginTop="53dp"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/fatherContactValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fatherContact"
+                    android:layout_marginLeft="135dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:text="73********"/>
+
+
+                <TextView
+                    android:id="@+id/motherContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mother's Contact"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/fatherContact"
+                    android:layout_marginLeft="38dp"
+                    android:layout_below="@+id/motherSign"
+                    android:layout_marginTop="53dp"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/motherContactValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fatherContact"
+                    android:layout_marginLeft="260dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:text="73********"/>
+
+                <TextView
+                    android:id="@+id/parentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/parentContactNo"
+                    android:text="Email ID"
+                    android:layout_marginTop="45dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_toRightOf="@+id/parentEmail"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/fatherContactValue"
+                    android:layout_marginTop="25dp"
+                    android:layout_toEndOf="@+id/parentPhoto"
+                    android:layout_marginLeft="65dp"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/fatherEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Father's Email ID"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/parentContactNo"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_below="@+id/fatherContactValue"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/fatherEmailValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fatherEmail"
+                    android:layout_marginLeft="135dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:text="kapil####@gmail.com"/>
+
+                <TextView
+                    android:id="@+id/motherEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mother's Email ID"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/parentContactNo"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/fatherEmailValue"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/motherEmailValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/motherEmail"
+                    android:layout_marginLeft="135dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:text="kapil####@gmail.com"/>
+
+
+                <TextView
+                    android:id="@+id/parentCorrespondanceAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/motherEmailValue"
+                    android:text="Correspondance Address"
+                    android:layout_marginTop="12dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_toRightOf="@+id/parentCorrespondanceAddress"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/motherEmailValue"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/parentPhoto"
+                    android:layout_marginLeft="155dp"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/parentCorrespondanceAddressValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Example Address here"
+                    android:maxLines="4"
+                    android:layout_marginRight="8dp"
+                    android:ellipsize="end"
+                    android:layout_below="@+id/motherEmailValue"
+                    android:layout_toRightOf="@+id/parentCorrespondanceAddress"
+                    android:textStyle="italic"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="-80dp"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/parentPermanentAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/parentCorrespondanceAddressValue"
+                    android:text="Correspondance Address"
+                    android:layout_marginTop="12dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_toRightOf="@+id/parentCorrespondanceAddress"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/parentCorrespondanceAddressValue"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/parentPhoto"
+                    android:layout_marginLeft="155dp"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/parentPermanentAddressValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Example Address here"
+                    android:maxLines="4"
+                    android:layout_marginRight="8dp"
+                    android:ellipsize="end"
+                    android:layout_below="@+id/parentPermanentAddress"
+                    android:layout_toRightOf="@+id/parentPermanentAddress"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="italic"
+                    android:layout_marginLeft="-80dp"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

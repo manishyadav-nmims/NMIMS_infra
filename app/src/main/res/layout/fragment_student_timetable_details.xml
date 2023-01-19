@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/fragment_ExamTimeTableDetailsFragment"
+    tools:context=".Fragments.Academic.ExamTimeTableDetailsFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dip"
+        android:elevation="3dp"
+        android:layout_margin="20dp"
+        android:background="@color/colorDullWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/timeTableSubjectDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/timeTableTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/timeTableSubjectDetails"
+                android:textColor="@color/colorBlue"/>
+
+            <TextView
+                android:id="@+id/timeTableSemester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/timeTableTime"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/timeTableSemester"
+                android:layout_marginTop="2dp"
+                android:background="@color/colorLightGrey"/>
+
+            <TextView
+                android:id="@+id/descriptionsTimeTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/view1"
+                android:textColor="@color/colorBlack"
+                android:alpha="0.5"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"/>
+
+
+            <Button
+                android:id="@+id/downloadTimeTableFileBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Download Content"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:visibility="visible"
+                android:layout_below="@+id/descriptionsTimeTable"
+                android:background="@drawable/reactangular_box_solid"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:clickable="true"
+    android:background="@color/colorWhite"
+    tools:context=".Fragments.Hostel.HostelStudentSportsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/typesOfSportLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/reactangular_box_non_corner_bluishdarkgrey">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/typesOfSportTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="20dp"
+                            android:background="@color/darkBluishGrey"
+                            android:textColor="@color/colorWhite"
+                            android:autoSizeTextType="uniform"
+                            android:text="TYPES OF SPORTS INTRESTED IN  - "/>
+
+                        <View
+                            android:id="@+id/lineBelowtypesOfSportTV"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/typesOfSportTV"
+                            android:background="@color/darkBluishGrey"
+                            android:layout_height="2dp"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/layoutTypesOfSport"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            android:layout_below="@+id/lineBelowtypesOfSportTV"
+                            android:layout_marginTop="8dp"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/typesOfSportTableList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/rectangle_upper_round"
+                                android:layout_marginTop="30dp"
+                                android:padding="5dp">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="0dp"
+                                    android:stretchColumns="*"
+                                    android:paddingBottom="5dp">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.15"
+                                            android:padding="5dp"
+                                            android:text="Sl No."
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.85"
+                                            android:padding="5dp"
+                                            android:text="Sports"
+                                            android:gravity="center"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/typesOfSportTableList"
+                                android:layout_marginTop="4dp"
+                                android:id="@+id/addValuesTypesOfSport"
+                                android:orientation="vertical">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="0dp"
+                                    android:stretchColumns="*"
+                                    android:paddingBottom="5dp">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="5dp"
+                                        android:background="@drawable/reactangular_box_non_corner_extradull"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.15"
+                                            android:padding="5dp"
+                                            android:text="1"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="14dp" />
+
+                                        <EditText
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.85"
+                                            android:padding="5dp"
+                                            android:hint="Sports name"
+                                            android:textColorHint="@color/colorDarkGrey"
+                                            android:gravity="center"
+                                            android:background="@color/colorWhite"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="14dp" />
+
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/btnsLayoutAddValuesToSport"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="12dp"
+                                android:layout_below="@+id/addValuesTypesOfSport">
+
+                                <Button
+                                    android:id="@+id/typesOfSportsAddNewItemBtn"
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:background="@color/darkBluishGrey"
+                                    android:textSize="12dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:text=" + Add New Item"/>
+
+                                <Button
+                                    android:id="@+id/typesOfSportsSubmitBtn"
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textSize="12dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/parrotGreen"
+                                    android:textColor="@color/colorWhite"
+                                    android:text="Save"/>
+
+                            </RelativeLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_below="@+id/btnsLayoutAddValuesToSport"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/yogaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/reactangular_box_non_corner_bluishdarkgrey">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/yogaTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="20dp"
+                            android:background="@color/darkBluishGrey"
+                            android:textColor="@color/colorWhite"
+                            android:autoSizeTextType="uniform"
+                            android:text="YOGA  +"/>
+
+                        <View
+                            android:id="@+id/lineBelowyogaTV"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/yogaTV"
+                            android:background="@color/darkBluishGrey"
+                            android:layout_height="2dp"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/layoutYogaTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:layout_below="@+id/lineBelowyogaTV"
+                            android:layout_marginTop="8dp"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/yogaTableList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/rectangle_upper_round"
+                                android:layout_marginTop="30dp"
+                                android:padding="5dp">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="0dp"
+                                    android:stretchColumns="*"
+                                    android:paddingBottom="5dp">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.14"
+                                            android:padding="5dp"
+                                            android:text="Sl No."
+                                            android:gravity="center_vertical"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="14dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.43"
+                                            android:padding="5dp"
+                                            android:text="Previous Experience"
+                                            android:gravity="center"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="14dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.43"
+                                            android:padding="5dp"
+                                            android:text="Active Participation in college"
+                                            android:gravity="center"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="14dp" />
+
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/addValuesToYogaList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal"
+                                android:padding="5dp"
+                                android:background="@drawable/reactangular_box_non_corner_extradull"
+                                android:layout_below="@+id/yogaTableList">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.14"
+                                    android:padding="5dp"
+                                    android:text="1"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="14dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="50dp"
+                                    android:background="@android:color/transparent"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:gravity="center"
+                                        style="@style/linear_equal_gap_style"
+                                        android:textColor="@color/colorBlack"
+                                        android:background="@color/colorWhite"
+                                        android:textSize="14dp" />
+
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:gravity="center"
+                                        style="@style/linear_equal_gap_style"
+                                        android:textColor="@color/colorBlack"
+                                        android:layout_marginLeft="5dp"
+                                        android:background="@color/colorWhite"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/btnsLayoutAddValuesToYoga"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="12dp"
+                                android:layout_below="@+id/addValuesToYogaList">
+
+                                <Button
+                                    android:id="@+id/yogaAddNewItemBtn"
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:background="@color/darkBluishGrey"
+                                    android:textSize="12dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:text=" + Add New Item"/>
+
+                                <Button
+                                    android:id="@+id/yogaSubmitBtn"
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textSize="12dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/parrotGreen"
+                                    android:textColor="@color/colorWhite"
+                                    android:text="Save"/>
+
+                            </RelativeLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_below="@+id/btnsLayoutAddValuesToYoga"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/noOfCompetitionParticipatedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/reactangular_box_non_corner_bluishdarkgrey">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/noOfCompetitionParticipatedTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="20dp"
+                            android:background="@color/darkBluishGrey"
+                            android:textColor="@color/colorWhite"
+                            android:autoSizeTextType="uniform"
+                            android:text="NO. OF COMPETITON PARTICIPATED  +"/>
+
+
+                        <View
+                            android:id="@+id/lineBelownoOfCompetitionParticipatedTV"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/noOfCompetitionParticipatedTV"
+                            android:background="@color/darkBluishGrey"
+                            android:layout_height="2dp"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/layoutNoOfCompetitionParticipatedTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:layout_below="@+id/lineBelownoOfCompetitionParticipatedTV"
+                            android:layout_marginTop="8dp"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/noOfCompetitionTableList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/rectangle_upper_round"
+                                android:layout_marginTop="30dp"
+                                android:padding="5dp">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="0dp"
+                                    android:stretchColumns="*"
+                                    android:paddingBottom="5dp">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:padding="5dp"
+                                            android:text="Internal Competition"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:padding="5dp"
+                                            android:text="External Competition"
+                                            android:gravity="center"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="16dp" />
+
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/noOfCompetitionTableList"
+                                android:layout_marginTop="4dp"
+                                android:id="@+id/addValuesnoOfCompetition"
+                                android:background="@drawable/reactangular_box_non_corner_extradull"
+                                android:padding="5dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:inputType="number"
+                                    android:textColorHint="@color/colorDarkGrey"
+                                    android:gravity="center"
+                                    style="@style/linear_equal_gap_style"
+                                    android:hint="Enter count"
+                                    android:background="@color/colorWhite"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="14dp" />
+
+                                <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:inputType="number"
+                                    style="@style/linear_equal_gap_style"
+                                    android:textColorHint="@color/colorDarkGrey"
+                                    android:gravity="center"
+                                    android:hint="Enter count"
+                                    android:layout_marginLeft="6dp"
+                                    android:background="@color/colorWhite"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="14dp" />
+
+
+                            </LinearLayout>
+
+                            <Button
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_below="@+id/addValuesnoOfCompetition"
+                                android:background="@color/parrotGreen"
+                                android:textColor="@color/colorWhite"
+                                android:layout_centerHorizontal="true"
+                                android:text="Save"/>
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/reactangular_box_non_corner_bluishdarkgrey">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/shortDescriptionSportsTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="20dp"
+                            android:background="@color/darkBluishGrey"
+                            android:textColor="@color/colorWhite"
+                            android:autoSizeTextType="uniform"
+                            android:text="SHORT DESCRIPTION  +"/>
+
+
+                        <View
+                            android:id="@+id/lineBelowShortDescriptionSportsTV"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/shortDescriptionSportsTV"
+                            android:background="@color/darkBluishGrey"
+                            android:layout_height="2dp"/>
+
+
+                        <EditText
+                            android:id="@+id/shortDescriptionMessageET"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/reactangular_box_non_corner_extradull"
+                            android:hint="Write about your sports description"
+                            android:padding="10dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:autoSizeMaxTextSize="8dp"
+                            android:visibility="gone"
+                            android:layout_below="@+id/lineBelowShortDescriptionSportsTV"
+                            android:textSize="14dp"
+                            android:layout_marginTop="15dp"
+                            android:focusable="true"
+                            android:textAlignment="center"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorBlack"
+                            android:layout_height="300dp"/>
+
+                        <Button
+                            android:id="@+id/submitShortDescriptionMessageBtn"
+                            android:layout_width="150dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="20dp"
+                            android:visibility="gone"
+                            android:layout_below="@+id/shortDescriptionMessageET"
+                            android:background="@color/parrotGreen"
+                            android:textColor="@color/colorWhite"
+                            android:layout_centerHorizontal="true"
+                            android:text="Save"/>
+
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

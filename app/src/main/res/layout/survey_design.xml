@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@color/colorDullWhite">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textStyle="bold"
+           android:textSize="16dp"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"
+           android:text="Survey name"/>
+
+       <TextView
+           android:id="@+id/surveyName"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="16dp"
+           android:alpha="0.7"
+           android:textAlignment="center"
+           android:layout_marginLeft="10dp"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:text="Start Date"/>
+
+        <TextView
+            android:id="@+id/startDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:text="End Date"/>
+
+        <TextView
+            android:id="@+id/endDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:alpha="0.7"
+            android:textAlignment="center"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:text="Status"/>
+
+        <TextView
+            android:id="@+id/surveyStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:alpha="0.7"
+            android:textAlignment="center"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startSurveyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reactangular_box_non_corner_extra_flamishred"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorWhite"
+        android:text="Start Survey"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorLightGrey"/>
+
+
+
+</LinearLayout>

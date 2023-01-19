@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    tools:context=".Fragments.Academic.FacultySettingFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDullWhite"
+        app:cardCornerRadius="15dip"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <CheckBox
+                android:id="@+id/checkboxBtnCopyAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Copy Previous Attendance"
+                android:checked="true"
+                app:buttonTint="@color/colorGreen"
+                android:textColor="@color/colorGreen"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/copyAttendanceTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/darkBluishGrey"
+                android:text="Note : When above button is active, it will copy the attendance of one continuous lecture to another."/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDullWhite"
+        app:cardCornerRadius="15dip"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/fetchAttendanceDataBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/round_corner_button"
+                android:text="Fetch Attendance Data" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/darkBluishGrey"
+                android:text="Click on above button to make all day lecture and student list offline at once. This is recommended in the morning before marking any lecture."/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colorDullWhite"
+        app:cardCornerRadius="15dip"
+        android:layout_margin="12dp">
+
+        <Button
+            android:id="@+id/refreshAttendanceDataBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/round_corner_button_dark_bluish_grey"
+            android:text="Refresh App Data" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colorLightGrey"
+        app:cardCornerRadius="15dip"
+        android:visibility="gone"
+        android:layout_margin="12dp">
+
+        <Button
+            android:id="@+id/sendDataToSapBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/round_corner_button_dark_bluish_grey"
+            android:text="Send Data to SAP" />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

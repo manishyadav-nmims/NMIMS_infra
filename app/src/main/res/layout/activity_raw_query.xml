@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.RawQueryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/extraDullWhite"
+        android:elevation="@dimen/_3sdp"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="5dp"
+            android:text="Raw Query"/>
+
+        <Button
+            android:id="@+id/executeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="10dp"
+            android:text="EXECUTE"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/queryEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Enter your query here"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorLightGrey"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:layout_weight="8"
+            android:background="@drawable/reactangular_box_non_corner_black"
+            tools:ignore="UselessParent">
+
+            <Spinner
+                android:id="@+id/spinnerSchool"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overlapAnchor="false"
+                android:popupBackground="@color/colorDarkGrey"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selectSchoolDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_9sdp"
+            android:layout_marginTop="-4dp"
+            android:background="@color/colorWhite"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp"
+            android:text="Select School"
+            android:textColor="@color/colorPrimaryDark" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/reactangular_box_non_corner">
+
+        <TextView
+            android:id="@+id/responseTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="textStart"
+            android:background="@color/colorDullWhite"/>
+    </ScrollView>
+
+</LinearLayout>

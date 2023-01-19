@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/assignment_box"
+    android:layout_margin="5dp"
+    android:padding="15dp">
+
+       <TextView
+           android:id="@+id/courseT"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Course :"
+           android:textStyle="bold"
+           android:textSize="16dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/assignmentCourseName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="course"
+          android:layout_marginLeft="10dp"
+          android:textAlignment="center"
+          android:layout_toRightOf="@+id/courseT"/>
+
+    <TextView
+        android:id="@+id/NameT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name :"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/assignmentCourseName"
+        android:textSize="16dp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/assignmentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/assignmentCourseName"
+        android:textAlignment="center"
+        android:layout_toRightOf="@+id/courseT"/>
+
+    <TextView
+        android:id="@+id/DateT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Date :"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/assignmentName"
+        android:textSize="16dp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/assignmentEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/assignmentName"
+        android:textAlignment="center"
+        android:layout_toRightOf="@+id/courseT"/>
+
+    <TextView
+        android:id="@+id/StatusT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status :"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/assignmentEndDate"
+        android:textSize="16dp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/assignmentStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assignmentName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="43dp"
+        android:layout_toRightOf="@+id/courseT"
+        android:text="passFailStatus"
+        android:textAlignment="center" />
+
+
+</RelativeLayout>

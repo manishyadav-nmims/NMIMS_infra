@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Activities.CheckFacultyLectureActivity">
+
+    <EditText
+        android:id="@+id/dateForLectureCheckET"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="14dp"
+        android:inputType="text"
+        android:hint="Date"
+        android:textAlignment="center"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/border_bottom"/>
+
+    <EditText
+        android:id="@+id/facultyIdForLectureCheckET"
+        android:layout_below="@+id/dateForLectureCheckET"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="14dp"
+        android:inputType="text"
+        android:hint="Faculty SapId"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/border_bottom"/>
+
+    <Spinner
+        android:id="@+id/spinnerSchoolCFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facultyIdForLectureCheckET"
+        android:background="@android:drawable/btn_dropdown"
+        android:textAlignment="center"
+        android:dropDownWidth="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
+        android:spinnerMode="dropdown"/>
+
+    <TextView
+        android:id="@+id/lectureCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facultyIdForLectureCheckET"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <Button
+        android:id="@+id/checkForLectureBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/dateFormt"
+        android:layout_below="@+id/spinnerSchoolCFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="DATE FORMAT :  DD-MM-YYYY  (Ex. 10-12-2019)"
+        android:layout_marginTop="10dp"
+        android:background="@color/flamishYellow"
+        android:inputType="number"
+        android:textColor="@color/colorBlack"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/facultyLectureRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateFormt"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/reactangular_box_non_corner_black"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/noLectureMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/flamishYellow"
+        android:visibility="gone"
+        android:background="@color/colorBlack"
+        android:padding="5dp"
+        android:text="NO LECTURE FOUND"/>
+
+</RelativeLayout>

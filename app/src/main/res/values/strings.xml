@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">NMIMS</string>
+    <string name="title_activity_faculty_drawer">NMIMS</string>
+    <string name="title_activity_student_drawer">NMIMS</string>
+    <string name="navigation_drawer_open"></string>
+    <string name="navigation_drawer_close"></string>
+    <string name="nav_header_title"></string>
+    <string name="nav_header_subtitle"></string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+
+    <!-- Dont: Remove or change this placeholder text... It is for menu of Navigation Drawer -->
+    <string name="cancel_search"><font color='#E84F4F'>Cancel Search</font></string>
+    <string name="edit_profile"><font color='#E84F4F'>Edit Profile</font></string>
+    <string name="profile"><font color='#E84F4F'>Profile</font></string>
+    <string name="change_password"><font color='#E84F4F'>Change Password</font></string>
+    <string name="settingF"><font color='#E84F4F'>Settings</font></string>
+    <string name="notificationF"><font color='#E84F4F'>Notification</font></string>
+    <string name="sports"><font color='#E84F4F'>Sports</font></string>
+    <string name="laundry"><font color='#E84F4F'>Laundry</font></string>
+    <string name="training_session"><font color='#E84F4F'>Training Session</font></string>
+    <string name="home_menu"><font color='#E84F4F'>Home</font></string>
+    <string name="attendance_menu"><font color='#E84F4F'>Attendance</font></string>
+    <string name="assignment_menu"><font color='#E84F4F'>Assignment</font></string>
+    <string name="internal_marks"><font color='#E84F4F'>ICA Marks</font></string>
+    <string name="time_table"><font color='#E84F4F'>Exam Timetable</font></string>
+    <string name="covid19"><font color='#E84F4F'>Covid-19 Test</font></string>
+    <string name="survey"><font color='#E84F4F'>Survey</font></string>
+    <string name="news_and_event_menu"><font color='#E84F4F'>News And Event</font></string>
+    <string name="campus_menu"><font color='#E84F4F'>Campus</font></string>
+    <string name="orientation_menu"><font color='#E84F4F'>Orientation</font></string>
+    <string name="downloads_menu"><font color='#E84F4F'>Downloads</font></string>
+    <string name="support_menu"><font color='#E84F4F'>Support</font></string>
+    <string name="attendance"><font color='#E84F4F'>Attendance</font></string>
+    <string name="complaint"><font color='#E84F4F'>Complaint</font></string>
+    <string name="logout_menu"><font color='#E84F4F'>Logout</font></string>
+    <string name="setting"><font color='#E84F4F'>SETTINGS</font></string>
+    <string name="leave"><font color='#E84F4F'>Leave</font></string>
+    <string name="title_activity_parent_drawer">ParentDrawer</string>
+    <!-- Dont: Remove or change this placeholder text... It is for menu of Navigation Drawer -->
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="start_updates">START LOCATION UPDATES</string>
+    <string name="stop_updates">STOP LOCATION UPDATES</string>
+    <string name="get_last_location">GET LAST LOCATION</string>
+    <string name="preference_file_key">student_pref</string>
+
+</resources>

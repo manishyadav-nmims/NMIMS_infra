@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <LinearLayout
+       android:id="@+id/detailsContainerCFL"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:id="@+id/facultyId"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="FacultyId"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/eventId"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="EventId"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/courseName"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Course Name"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+       android:id="@+id/programId"
+       android:layout_width="wrap_content"
+       android:layout_height="35dp"
+       android:text="ProgramId"
+       android:padding="5dp"
+       android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/programName"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Program Name"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/startTime"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Start Time"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/endTime"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="End Time"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/maxEndTime"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Max End Time"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/allotedLectures"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Alloted Lectures"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/conductedLectures"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Conducted Lectures"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <TextView
+           android:id="@+id/remainingLectures"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Remaining Lectures"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+
+       <TextView
+           android:id="@+id/attendanceMarked"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="Attendance Marked"
+           android:padding="5dp"
+           android:textColor="@color/colorBlack"/>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="@drawable/download_red"/>
+
+   </LinearLayout>
+
+</LinearLayout>

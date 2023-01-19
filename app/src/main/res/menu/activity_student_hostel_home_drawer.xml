@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_shh"
+            android:icon="@drawable/home"
+            android:title="@string/home_menu" />
+        <item
+            android:id="@+id/nav_profile_shh"
+            android:icon="@drawable/user_p"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_leave_shh"
+            android:icon="@drawable/leave"
+            android:title="@string/leave" />
+
+        <item
+            android:id="@+id/nav_sports_shh"
+            android:icon="@drawable/sports"
+            android:title="@string/sports" />
+
+        <item
+            android:id="@+id/nav_laundry_shh"
+            android:icon="@drawable/laundry"
+            android:title="@string/laundry" />
+
+        <item
+            android:id="@+id/nav_support_shh"
+            android:icon="@drawable/support_menu"
+            android:title="@string/support_menu" />
+
+        <item
+            android:id="@+id/nav_attendance_shh"
+            android:icon="@drawable/attendance"
+            android:title="@string/attendance" />
+
+        <item
+            android:id="@+id/nav_complaint_shh"
+            android:icon="@drawable/complaint"
+            android:title="@string/complaint" />
+
+        <item
+            android:id="@+id/nav_logout_shh"
+            android:icon="@drawable/logout"
+            android:title="@string/logout_menu" />
+    </group>
+</menu>

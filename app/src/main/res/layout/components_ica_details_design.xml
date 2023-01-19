@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="8dp"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/icaMarksTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:stretchColumns="*"
+        android:paddingBottom="5dp">
+
+        <TableRow
+            android:id="@+id/ica_row"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ica_key"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ica_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

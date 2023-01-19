@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SchoolAttendanceDataCheckActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/reactangular_box_non_corner">
+
+        <TextView
+            android:id="@+id/modePageTv"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Mode"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPurple"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/allSchoolsDataCheckTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/modePageTv"
+            android:background="@color/colorGreen"
+            android:padding="10dp"
+            android:text="All School"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/schoolDetailsSA"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="45dp"
+        android:weightSum="1"
+        android:background="@drawable/reactangular_box_non_corner">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:padding="5dp"
+            android:text="Details"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#000"
+            android:background="@drawable/reactangular_box_non_corner_black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35"
+            android:padding="5dp"
+            android:text="Schools"
+            android:background="@drawable/reactangular_box_non_corner_black"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/changeDateForAllTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:padding="5dp"
+            android:background="@drawable/reactangular_box_non_corner_black"
+            android:text="Date"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:padding="5dp"
+            android:text="Status"
+            android:background="@drawable/reactangular_box_non_corner_black"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/schoolAttendanceDataRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/schoolDetailsSA"
+        android:padding="5dp"></androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

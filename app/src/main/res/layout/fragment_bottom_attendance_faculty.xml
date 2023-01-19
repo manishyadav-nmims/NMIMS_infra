@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    android:scrollbars="vertical"
+    tools:context=".Fragments.Academic.FacultyAttendanceBottomFragment">
+
+    <TextView
+        android:id="@+id/titleFA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:background="@drawable/reactangular_box_non_corner_black"
+        android:text="Faculty Attendance "/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/titleFA"
+        android:id="@+id/linearLayoutFA"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"></LinearLayout>
+
+    <Button
+        android:id="@+id/saveFABtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutFA"
+        android:layout_margin="12dp"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/round_corner_button_dark_bluish_grey"
+        android:text="Save" />
+
+</RelativeLayout>

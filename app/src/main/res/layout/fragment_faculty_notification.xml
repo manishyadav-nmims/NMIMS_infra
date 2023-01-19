@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".Fragments.Academic.FacultyNotificationFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/facultyNotificationRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/no_notificationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorLightGrey"
+        android:text="No new Notification"/>
+
+</RelativeLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    tools:context=".Fragments.Academic.FacultyCourseStatics">
+
+    <LinearLayout
+        android:id="@+id/spinnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reactangular_box"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:orientation="horizontal"
+                android:layout_weight="8"
+                android:background="@drawable/reactangular_box_non_corner_black"
+                tools:ignore="UselessParent">
+
+                <Spinner
+                    android:id="@+id/spinnerProgram"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overlapAnchor="false"
+                    android:popupBackground="@color/colorLightestPink"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/selectProgramDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="-4dp"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:text="Select Program"
+                android:textColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_weight="8"
+                android:orientation="horizontal"
+                android:background="@drawable/reactangular_box_non_corner_black"
+                tools:ignore="UselessParent">
+
+                <Spinner
+                    android:id="@+id/spinnerCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overlapAnchor="false"
+                    android:popupBackground="@color/colorLightestPink"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/selectCourseDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="-4dp"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:text="Select Course"
+                android:textColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/spinnerLayout"
+        app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:id="@+id/lectureDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/al"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Allotted lectures"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/allottedLectures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:text="NA"
+            android:alpha="0.7"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/cl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/allottedLectures"
+            android:text="Conducted lectures"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/conductedLectures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/allottedLectures"
+            android:layout_alignParentEnd="true"
+            android:text="NA"
+            android:textColor="@color/colorGreen"/>
+
+        <TextView
+            android:id="@+id/rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cl"
+            android:text="Remaining lectures"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/remainingLectures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cl"
+            android:layout_alignParentEnd="true"
+            android:text="NA"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/facultyCourseStaticsProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/facultyCourseStaticsErrorImage"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@drawable/no_data"/>
+
+        <TextView
+            android:id="@+id/facultyCourseStaticsEmptyResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/facultyCourseStaticsErrorImage"
+            android:alpha="0.5"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#000000" />
+
+</RelativeLayout>

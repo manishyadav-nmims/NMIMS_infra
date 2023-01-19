@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinnerLayout">
+
+        <TextView
+            android:id="@+id/fwHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="You don't have any lectures remaining !"/>
+
+        <TextView
+            android:id="@+id/alD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_below="@+id/fwHeading"
+            android:layout_marginTop="20dp"
+            android:text="Allotted lectures"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/allottedLecturesD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/fwHeading"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:text="NA"
+            android:alpha="0.7"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/clD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/allottedLecturesD"
+            android:text="Conducted lectures"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/conductedLecturesD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/allottedLecturesD"
+            android:layout_alignParentEnd="true"
+            android:text="NA"
+            android:textColor="@color/colorGreen"/>
+
+        <TextView
+            android:id="@+id/rlD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/clD"
+            android:text="Remaining lectures"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/remainingLecturesD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/clD"
+            android:layout_alignParentEnd="true"
+            android:text="NA"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/workLoadDisappear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/remainingLecturesD"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/reactangular_box_solid_red"
+            android:text="Got it"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

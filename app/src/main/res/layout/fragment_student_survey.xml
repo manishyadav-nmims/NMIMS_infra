@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    tools:context=".Fragments.Academic.StudentSurveyFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/surveyListRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/surveyListvaProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/surveyErrorImage"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/no_data"/>
+
+    <TextView
+        android:id="@+id/surveyListvaEmptyResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/surveyErrorImage"
+        android:alpha="0.5"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorBlack" />
+
+
+
+</RelativeLayout>

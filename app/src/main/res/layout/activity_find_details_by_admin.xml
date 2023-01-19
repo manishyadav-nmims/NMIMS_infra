@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.FindDetailsByAdminActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarFDA"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tvTitleFDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Details"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/changeSearchStyle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/shuffle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/FDA_searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/toolbarFDA"
+        android:background="@drawable/reactangular_box_non_corner"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_student"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/cancelSearchUserBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/cancel"/>
+
+        <EditText
+            android:id="@+id/searchUserFDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="45dp"
+            android:textSize="16dp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:alpha="0.8"
+            android:background="@android:color/transparent"
+            android:textColorHint="@color/colorDarkGrey"
+            android:hint="Search user by SapId"
+            android:textAlignment="center"
+            android:maxLines="1"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchBarUsingFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:layout_below="@+id/FDA_searchBar">
+
+        <EditText
+            android:id="@+id/enterFirstNameFDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter firstname"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/enterLastNameFDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter lastname"
+            android:layout_below="@+id/enterFirstNameFDA"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search User"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/reactangular_box_solid_black"
+            android:layout_margin="25dp"
+            android:layout_below="@+id/enterLastNameFDA"
+            android:id="@+id/searchUser"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/FDA_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchBarUsingFL"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/fdaProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/fda_errorImage"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/no_data"/>
+
+    <TextView
+        android:id="@+id/fdaEmptyResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/fda_errorImage"
+        android:alpha="0.5"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000" />
+
+</RelativeLayout>

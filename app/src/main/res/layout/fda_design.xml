@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDullWhite"
+        app:cardCornerRadius="15dip"
+        android:layout_margin="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sapIdFDA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sap ID "
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/sapIdFDAValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:alpha="0.6"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/sapIdFDA"
+                android:layout_alignParentEnd="true"
+                android:textSize="16dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/fullNameFDA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FullName "
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@+id/sapIdFDAValue"/>
+
+            <TextView
+                android:id="@+id/fullNameFDAValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorBlack"
+                android:alpha="0.6"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/sapIdFDAValue"
+                android:layout_toRightOf="@+id/fullNameFDA"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/emailFDA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Id "
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/fullNameFDAValue"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/emailFDAVAlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:alpha="0.6"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/emailFDA"
+                android:layout_below="@+id/fullNameFDAValue"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/mobileFDA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone  "
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/emailFDAVAlue"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/mobileFDAVAlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:alpha="0.6"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/mobileFDA"
+                android:layout_below="@+id/emailFDAVAlue"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

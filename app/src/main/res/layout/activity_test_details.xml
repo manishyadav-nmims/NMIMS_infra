@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.TestDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/td_hearder"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Details"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check"
+            android:background="@drawable/reactangular_box_solid_light_blue"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorWhite"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/checkSchoolTestDetailsBtn"/>
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/td_hearder"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/reactangular_box_non_corner">
+
+        <RadioButton
+            android:id="@+id/radioIS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Individual School"
+            android:padding="5dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioAS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="All School" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerSchool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/td_hearder"
+        android:background="@android:drawable/btn_dropdown"
+        android:textAlignment="center"
+        android:dropDownWidth="150dp"
+        android:layout_toRightOf="@+id/radio"
+        android:layout_margin="25dp"
+        android:spinnerMode="dropdown"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio"
+        android:scrollbars="vertical"
+        android:layout_margin="12dp"
+        android:id="@+id/testDetailsRecyclerview"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarTD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/errorImageTD"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/no_data"/>
+
+    <TextView
+        android:id="@+id/emptyResultTD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:layout_below="@+id/errorImageTD"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="16dp" />
+
+</RelativeLayout>

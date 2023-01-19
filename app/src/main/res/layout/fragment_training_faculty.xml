@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/fragment_FacultyTrainingFragment"
+    tools:context=".Fragments.Academic.FacultyTrainingFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewFT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDullWhite"
+        android:visibility="visible"
+        app:cardCornerRadius="15dip"
+        android:layout_margin="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/questionFT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:text="Are you currently attending the training session ?"/>
+
+            <CheckBox
+                android:id="@+id/checkboxFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/questionFT"
+                android:text="YES"
+                android:textStyle="bold"
+                android:alpha="0.7"
+                android:textSize="16dp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                android:id="@+id/submitFT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/questionFT"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="40dp"
+                android:textColor="@color/colorDarkGrey"
+                android:text="CONFIRM"
+                android:enabled="false"
+                android:textSize="16dp"
+                android:background="@drawable/round_corner_button_grey"
+                android:layout_toRightOf="@+id/checkboxFT"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/ProgressBarFT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/errorImageFT"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/no_data"/>
+
+    <TextView
+        android:id="@+id/noTrainingMsgFT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/errorImageFT"
+        android:textSize="16dp"
+        android:text="Currently, No training session is going on for you..."/>
+
+</RelativeLayout>

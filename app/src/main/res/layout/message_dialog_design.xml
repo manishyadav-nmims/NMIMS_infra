@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@drawable/gradient"
+    android:padding="12dp">
+
+    <Button
+        android:id="@+id/cancel_MsgBTn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:layout_gravity="end"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:text="X"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"
+        android:text="NOTICE"
+        android:id="@+id/titleContent"
+        android:textSize="22dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/messageContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/colorWhite"
+    tools:context=".Fragments.Hostel.HostelStudentMarkAttendanceFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/studentStartDateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/linear_equal_gap_style"
+                    android:background="@color/flamishGreen"
+                    android:textColor="@color/darkBluishGrey"
+                    android:textAllCaps="true"
+                    android:layout_marginRight="10dp"
+                    android:textSize="14dp"
+                    android:text="Start Date"/>
+
+                <Button
+                    android:id="@+id/studentEndDateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/linear_equal_gap_style"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/darkBluishGrey"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14dp"
+                    android:text="End Date"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/btnLayout"
+                android:background="@drawable/reactangular_box_non_corner_silver"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/studentViewAttendanceTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:stretchColumns="*"
+                    android:background="@drawable/reactangular_box_non_corner_silver"
+                    android:paddingBottom="5dp">
+
+                    <TableRow
+                        android:id="@+id/studentViewAttendanceTableRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:padding="5dp"
+                            android:text="DATE"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:text="STATUS"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/studentViewAttendanceRecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/studentViewAttendanceTable">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
