@@ -670,7 +670,7 @@ public class FacultyHomeFragment extends Fragment
                         }
                         else
                         {
-                            card_workload.setVisibility(View.VISIBLE);
+                            card_workload.setVisibility(View.GONE);
                         }
                     }
                 }
