@@ -50,12 +50,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.BuildConfig;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.nmims.app.BuildConfig;
 import com.nmims.app.Fragments.Academic.AnnoucementsFragment;
 import com.nmims.app.Fragments.Academic.DownloadFragment;
 import com.nmims.app.Fragments.Academic.ExamTimeTableFragment;
@@ -478,11 +478,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            SQLiteDatabase db = dbHelper.getWritableDatabase();
-                            String truncateTable = "DELETE FROM userData";
-                            db.execSQL(truncateTable);
-                            String truncateTableBE = "DELETE FROM backend_control";
-                            db.execSQL(truncateTableBE);
+                            dbHelper.deleteuserData();
                             dbHelper.deleteMyDate();
                             deletePlayerId();
                             dbHelper.deleteMyNotification();
@@ -509,12 +505,8 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
                 }
             } else {
                 deletePlayerId();
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                String truncateTable = "DELETE FROM userData";
-                db.execSQL(truncateTable);
-                String truncateTableBE = "DELETE FROM backend_control";
-                db.execSQL(truncateTableBE);
                 DBHelper dbHelper = new DBHelper(this);
+                dbHelper.deleteuserData();
                 dbHelper.deleteMyDate();
                 dbHelper.deleteMyNotification();
                 dbHelper.deleteAssignmentData();
@@ -1096,11 +1088,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
         alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                String truncateTable = "DELETE FROM userData";
-                db.execSQL(truncateTable);
-                String truncateTableBE = "DELETE FROM backend_control";
-                db.execSQL(truncateTableBE);
+                dbHelper.deleteuserData();
                 dbHelper.deleteMyDate();
                 dbHelper.deleteMyNotification();
                 dbHelper.deleteAssignmentData();

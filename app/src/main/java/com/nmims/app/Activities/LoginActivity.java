@@ -256,7 +256,6 @@ public class LoginActivity extends AppCompatActivity {
             mapJ.put("password", password);
             final String mRequestBody = aes.encryptMap(mapJ);
             Log.d("mRequestBody---1",mRequestBody.toString());
-            new MyLog(LoginActivity.this).debug("mRequestBody",mRequestBody);
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String resp) {
@@ -335,9 +334,6 @@ public class LoginActivity extends AppCompatActivity {
                                 roleListString = roleListString + "," + roles.getString(i);
                             }
                         }
-                        new MyLog(NMIMSApplication.getAppContext()).debug("schoolList", schoolListString);
-                        new MyLog(NMIMSApplication.getAppContext()).debug("currentSchool", currentSchool);
-                        new MyLog(NMIMSApplication.getAppContext()).debug("roleList", roleListString);
                         String email = "", mobile = "", firstname ="", lastname ="", user_image = "", token = "";
                         if(response.has("email"))
                         {

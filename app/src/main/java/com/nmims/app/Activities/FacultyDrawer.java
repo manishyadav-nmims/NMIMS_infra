@@ -46,12 +46,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.BuildConfig;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.nmims.app.BuildConfig;
 import com.nmims.app.Fragments.Academic.FacultyAttendanceFragment;
 import com.nmims.app.Fragments.Academic.FacultyHomeFragment;
 import com.nmims.app.Fragments.Academic.FacultyNotificationFragment;
@@ -178,7 +178,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
             new MyLog(NMIMSApplication.getAppContext()).debug("Insert Date Exception", e.getMessage());
         }
 
-        app_versionTv_F.setText("Version : "+BuildConfig.VERSION_NAME);
+        app_versionTv_F.setText("Version : "+ BuildConfig.VERSION_NAME);
 
         //////////////////INTERNET CONNECTION////////////////////////////
 
@@ -491,13 +491,8 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
 
         else if (id == R.id.nav_logout)
         {
-
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
-            String truncateTable = "DELETE FROM userData";
-            db.execSQL(truncateTable);
-            String truncateTableBE = "DELETE FROM backend_control";
-            db.execSQL(truncateTableBE);
             DBHelper dbHelper = new DBHelper(FacultyDrawer.this);
+            dbHelper.deleteuserData();
             dbHelper.deleteMyDate();
             dbHelper.deleteMyNotification();
             dbHelper.deleteAllFacultyNotification();
@@ -1160,7 +1155,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
             as++;
         }
 
-        /*if(logoutPermission)
+     /*   if(logoutPermission)
         {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             String truncateTable = "DELETE FROM userData";
