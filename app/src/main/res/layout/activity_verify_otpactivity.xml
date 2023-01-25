@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.VerifyOTPActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_mark_email"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="OTP Verification"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:text="Enter the otp sent to Your Registered Email"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/inputCode1"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLength="1"
+                    android:background="@drawable/reactangular_box_non_corner"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="24sp"
+                    tools:ignore="LabelFor"/>
+
+                <EditText
+                    android:id="@+id/inputCode2"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:background="@drawable/reactangular_box_non_corner"
+                    android:layout_marginStart="4dp"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLength="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="24sp"
+                    tools:ignore="LabelFor"/>
+
+                <EditText
+                    android:id="@+id/inputCode3"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:background="@drawable/reactangular_box_non_corner"
+                    android:layout_marginStart="4dp"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLength="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="24sp"
+                    tools:ignore="LabelFor"/>
+
+                <EditText
+                    android:id="@+id/inputCode4"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/reactangular_box_non_corner"
+                    android:importantForAutofill="no"
+                    android:maxLength="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="24sp"
+                    tools:ignore="LabelFor"/>
+
+                <EditText
+                    android:id="@+id/inputCode5"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/reactangular_box_non_corner"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLength="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="24sp"
+                    tools:ignore="LabelFor"/>
+
+                <EditText
+                    android:id="@+id/inputCode6"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/reactangular_box_non_corner"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:maxLength="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="24sp"
+                    tools:ignore="LabelFor"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/NewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:inputType="textPassword"
+                android:background="@drawable/shape_email"
+                android:drawableLeft="@drawable/ic_icon_password"
+                android:drawablePadding="10dp"
+                android:hint="New Password"
+                />
+            <EditText
+                android:id="@+id/ConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:inputType="textPassword"
+                android:background="@drawable/shape_email"
+                android:drawableLeft="@drawable/ic_icon_password"
+                android:drawablePadding="10dp"
+                android:hint="Confirm New Password" />
+
+                <Button
+                    android:layout_gravity="center"
+                    android:id="@+id/buttonVerify"
+                    android:textColor="#FFFF"
+                    android:layout_width="150dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/showPassword"
+                    android:textSize="16sp"
+                    android:background="@drawable/round_corner_button"
+                    android:text="verify" />
+
+
+        </LinearLayout>
+
+</ScrollView>
