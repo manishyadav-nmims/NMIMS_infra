@@ -810,7 +810,6 @@ public class FacultyHomeFragment extends Fragment
                                 if(currObj.has("studentCourseAttendanceList"))
                                 {
                                     studentCourseAttendanceList = currObj.getString("studentCourseAttendanceList");
-                                    new MyLog(getContext()).debug("studentCourseAttendanceList "+i,studentCourseAttendanceList);
 
                                     JSONArray jsonArrayStud = new JSONArray(studentCourseAttendanceList);
                                     for(int s=0; s < jsonArrayStud.length(); s++)
@@ -847,7 +846,6 @@ public class FacultyHomeFragment extends Fragment
                                             attendanceFlag = "Y";
                                             isAttendanceSubmitted = "Y";
                                         }
-
                                         dbHelper.insertStudentData( new AttendanceStudentDataModel(studentName, studentUsername, studentRollNo, studentStatus, courseIdStud, isMarked, start_time, end_time, isAttendanceSubmitted, currentDate, LECTURE_ID,attendanceSign, attendanceFlag, sharedPrefschoolName, "N",createdDate, lastModifiedDate));
                                     }
                                 }
@@ -863,7 +861,6 @@ public class FacultyHomeFragment extends Fragment
                                     progressDialog.dismiss();
                                     ((FacultyDrawer) getActivity()).setDrawerEnabled(true);
                                     String currentDateTime  =  new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH).format(calendar.getTime());
-                                    new MyLog(getContext()).debug("hideCardTime",currentDateTime);
                                     new MyToast(getContext()).showSmallCustomToast("Attendance data stored offline successfully...");
                                 }
                             });
@@ -1202,8 +1199,6 @@ public class FacultyHomeFragment extends Fragment
                                 }
 
                                 new MyLog(getContext()).debug("FH_presentFacultyId "+String.valueOf(i)+" ",presentFacultyId);
-
-
                                 dbHelper.insertLectureData(new LecturesDataModel(randomKey+"_"+class_date,facultyId, flag, classDateAfter, start_time, end_time, courseId, courseName, programId, programName, maxEndTimeForCourse, currentDate, schoolName,event_id, allotted_lectures, conducted_lectures, remaining_lectures,presentFacultyId));
 
                                 if(currObj.has("courseList"))

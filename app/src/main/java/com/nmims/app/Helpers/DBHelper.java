@@ -237,7 +237,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void insertBackendControl(BackendModel backendModel)
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        String sql = "insert into backend_control (key , value) values ('"+backendModel.getKey()+"','"+backendModel.getValue()+"')";
+        String sql = "insert into backend_control ('key' , value) values ('"+backendModel.getKey()+"','"+backendModel.getValue()+"')";
         db.execSQL(sql);
         db.close();
         new MyLog(NMIMSApplication.getAppContext()).debug("insertBackendControl", sql);

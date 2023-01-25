@@ -46,12 +46,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.database.BuildConfig;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.nmims.app.BuildConfig;
 import com.nmims.app.Fragments.Academic.FacultyAttendanceFragment;
 import com.nmims.app.Fragments.Academic.FacultyHomeFragment;
 import com.nmims.app.Fragments.Academic.FacultyNotificationFragment;
@@ -103,7 +103,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
     private TextView noInternetWarning, app_versionTv_F;
     private DatabaseReference databaseReference;
     private int REQUEST_PERMISSIONS_CODE_WRITE_STORAGE = 6;
-    private String newVersion = "", currentVersion = "", forceUpdate = "", workLoad="",myApiUrlLms="", sharedPrefschoolName= "",
+    private String newVersion = "N", currentVersion = "C", forceUpdate = "", workLoad="",myApiUrlLms="", sharedPrefschoolName= "",
             selectedSchool="",currentDate="", currentTime="", syncFactor = "", token = "";
     private Menu menu;
     private FirebaseAnalytics mFirebaseAnalytics;
