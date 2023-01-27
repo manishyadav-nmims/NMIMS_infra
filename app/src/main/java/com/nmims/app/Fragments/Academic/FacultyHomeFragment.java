@@ -1,6 +1,7 @@
 package com.nmims.app.Fragments.Academic;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -41,6 +42,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.nmims.app.Activities.FacultyDrawer;
 import com.nmims.app.Helpers.AESEncryption;
+import com.nmims.app.Helpers.CommonMethods;
 import com.nmims.app.Helpers.Config;
 import com.nmims.app.Helpers.DBHelper;
 import com.nmims.app.Helpers.MyLog;
@@ -146,7 +148,7 @@ public class FacultyHomeFragment extends Fragment
         supportic = view.findViewById(R.id.supportic);
         facultyNotific = view.findViewById(R.id.facultyNotific);
         facultyNotiftv = view.findViewById(R.id.facultyNotiftv);
-
+        CommonMethods.handleSSLHandshake();
         Cursor cursor = dbHelper.getUserDataValues();
         if (cursor!= null)
         {
@@ -1327,8 +1329,6 @@ public class FacultyHomeFragment extends Fragment
                     headers.put("username", username);
                     return headers;
                 }
-
-
             };
             stringRequest.setRetryPolicy(new DefaultRetryPolicy(30000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             requestQueue.add(stringRequest);
@@ -1336,7 +1336,7 @@ public class FacultyHomeFragment extends Fragment
         catch (Exception e)
         {
             progressDialog.hide();
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
             alertDialogBuilder.setTitle("Error");
             alertDialogBuilder.setMessage("Something went wrong");
             alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

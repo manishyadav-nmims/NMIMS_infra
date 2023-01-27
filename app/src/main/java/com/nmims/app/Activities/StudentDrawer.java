@@ -135,8 +135,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
         //myApiUrlLms = Config.myApiUrlLms;
         myApiUrlSurvey = dbHelper.getBackEndControl("myApiUrlSurvey").getValue();
         /////////////////CHECK FOR CRASH///////////////
-
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         /////////////////CHECK FOR CRASH///////////////

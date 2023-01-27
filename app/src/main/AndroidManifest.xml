@@ -19,7 +19,6 @@
         android:roundIcon="@drawable/logo_s"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".Activities.VerifyOTPActivity"
@@ -27,66 +26,66 @@
         </activity>
         <activity
             android:name=".TimeTableCalendar.StudentWeekView"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".TimeTableCalendar.StudentTimeTable"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".TimeTableCalendar.WeekViewActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".TimeTableCalendar.TimeTableCalendar"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.RawQueryActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activities.CheckFacultyLectureActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.StudentHostelHomeDrawer"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.FullTestDetailsActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.TestDetailsActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.SendDataActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.SchoolAttendanceDataCheckActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.FullUserDetailsActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.FindDetailsByAdminActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.ResetPasswordByAdminActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.SupportAdminActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.ParentDrawer"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_parent_drawer"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -97,25 +96,25 @@
         -->
         <activity
             android:name=".Activities.StudentDrawer"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_student_drawer"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.FacultyDrawer"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_faculty_drawer"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.LoginActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activities.MapsActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <!--
 <activity

@@ -141,7 +141,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
         updateAttendanceSyncDataModelList = new ArrayList<>();
         allStudentList = new ArrayList<>();
         progressDialog = new ProgressDialog(FacultyDrawer.this);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
 
         /////////////////CHECK FOR CRASH///////////////
 

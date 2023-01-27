@@ -18,11 +18,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
-
-import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.text.ParseException;
@@ -69,8 +66,27 @@ public class CommonMethods extends HurlStack {
                 return myTrustedAnchors;
             }
             public void checkClientTrusted(X509Certificate[] certs, String authType) {
+                try {
+                    certs[0].checkValidity();
+                } catch (Exception e) {
+                    try {
+                        throw new CertificateException("Certificate not valid or trusted.");
+                    } catch (CertificateException ex) {
+                        ex.printStackTrace();
+                    }
+                }
             }
             public void checkServerTrusted(X509Certificate[] certs, String authType) {
+                try {
+                    certs[0].checkValidity();
+                } catch (Exception e) {
+                    try {
+                        throw new CertificateException("Certificate not valid or trusted.");
+                    } catch (CertificateException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+
             }
         } };
         SSLContext sc = null;
@@ -88,7 +104,9 @@ public class CommonMethods extends HurlStack {
         // Create all-trusting host name verifier
         HostnameVerifier allHostsValid = new HostnameVerifier() {
             public boolean verify(String hostname, SSLSession session) {
+                Log.d("hostname",hostname);
                 if (!"https://portal.svkm.ac.in1".equalsIgnoreCase(hostname)) {
+                    //portal.svkm.ac.in
                     return true;
                 } else {
                     return false;

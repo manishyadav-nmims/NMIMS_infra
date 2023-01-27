@@ -38,6 +38,11 @@ android {
         multiDexEnabled true
 
     }
+    signingConfigs{
+        release {
+            v2SigningEnabled true
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false

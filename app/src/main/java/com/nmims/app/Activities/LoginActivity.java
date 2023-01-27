@@ -249,8 +249,8 @@ public class LoginActivity extends AppCompatActivity {
     {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-       String URL = myApiUrlUsermgmt + "authenticateUserForApp";
-      // String URL ="https://portal.svkm.ac.in/usermgmt/authenticateUserForApp";
+        String URL = myApiUrlUsermgmt + "authenticateUserForApp";
+       //String URL ="https://portal.svkm.ac.in/usermgmt/authenticateUserForApp";
         new MyLog(NMIMSApplication.getAppContext()).debug("url ", URL);
         final UserDataModel userDataModel = new UserDataModel();
         try {
@@ -690,8 +690,8 @@ public class LoginActivity extends AppCompatActivity {
             progressDialog.setMessage("Sending OTP...Please wait");
             progressDialog.show();
             progressDialog.setCancelable(false);
-            //String URL = myApiUrlUsermgmt +"sendOtpForApp";
-            String URL = "http://10.130.34.107:8080/" +"sendOtpForApp";
+            String URL = myApiUrlUsermgmt +"sendOtpForApp";
+            //String URL = "http://10.130.34.107:8080/" +"sendOtpForApp";
             Log.d("sendOtpForAppURL",URL);
             requestQueue = Volley.newRequestQueue(getApplication());
             Map<String, Object> mapJ = new HashMap<String, Object>();

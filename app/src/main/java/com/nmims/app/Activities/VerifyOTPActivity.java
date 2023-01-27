@@ -274,8 +274,8 @@ public class VerifyOTPActivity extends AppCompatActivity {
             progressDialog.setMessage("Loading...");
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.setCancelable(false);
-            //String URL = myApiUrlUsermgmt + "validateOtpAndResetPasswordForApp";
-            String URL = "http://10.130.34.107:8080/" +"validateOtpAndResetPasswordForApp";
+            String URL = myApiUrlUsermgmt + "validateOtpAndResetPasswordForApp";
+            //String URL = "http://10.130.34.107:8080/" +"validateOtpAndResetPasswordForApp";
             new MyLog(NMIMSApplication.getAppContext()).debug("URL", URL);
             requestQueue = Volley.newRequestQueue(getApplication());
             Map<String, Object> mapJ = new HashMap<String, Object>();
