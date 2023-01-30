@@ -104,9 +104,8 @@ public class CommonMethods extends HurlStack {
         // Create all-trusting host name verifier
         HostnameVerifier allHostsValid = new HostnameVerifier() {
             public boolean verify(String hostname, SSLSession session) {
-                Log.d("hostname",hostname);
+                //Log.d("hostname",hostname);
                 if (!"https://portal.svkm.ac.in1".equalsIgnoreCase(hostname)) {
-                    //portal.svkm.ac.in
                     return true;
                 } else {
                     return false;
