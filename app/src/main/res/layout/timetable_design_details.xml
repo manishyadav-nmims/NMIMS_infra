@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp">
+    android:layout_margin="5dp"
+    app:cardCornerRadius="15dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,6 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/reactangular_box"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -28,14 +30,20 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="14dp" />
 
-            <TextView
+            <View
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLightGrey"/>
+
+           <!-- <TextView
                 android:id="@+id/titleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_margin="10dp"
                 android:textColor="@color/darkBluishGrey"
-                android:textSize="16dp"/>
+                android:textSize="16dp"/>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,7 +55,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:text="Room No"
                     android:textColor="@color/colorBlack"
                     android:textSize="14dp"
@@ -57,8 +65,9 @@
                     android:id="@+id/roomNoTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
+                    android:layout_weight="0.5"
                     android:textAlignment="center"
+                    android:textStyle="bold"
                     android:alpha="0.65"
                     android:textColor="@color/colorBlack"
                     android:textSize="14dp" />
@@ -75,7 +84,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:text="Room Type"
                     android:textColor="@color/colorBlack"
                     android:textSize="14dp"
@@ -85,7 +94,8 @@
                     android:id="@+id/roomTypeTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
+                    android:layout_weight="0.5"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:alpha="0.65"
                     android:textColor="@color/colorBlack"
@@ -103,7 +113,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:text="Start Time"
                     android:textColor="@color/colorBlack"
                     android:textSize="14dp"
@@ -113,8 +123,9 @@
                     android:id="@+id/startTimeTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
+                    android:layout_weight="0.5"
                     android:textAlignment="center"
+                    android:textStyle="bold"
                     android:alpha="0.65"
                     android:textColor="@color/colorBlack"
                     android:textSize="14dp" />
@@ -131,7 +142,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:text="End Time"
                     android:textColor="@color/colorBlack"
                     android:textSize="14dp"
@@ -141,7 +152,8 @@
                     android:id="@+id/endTimeTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
+                    android:layout_weight="0.5"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:alpha="0.65"
                     android:textColor="@color/colorBlack"
@@ -159,7 +171,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:text="Semester"
                     android:textColor="@color/colorBlack"
                     android:textSize="14dp"
@@ -169,7 +181,8 @@
                     android:id="@+id/semesterTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
+                    android:layout_weight="0.5"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:alpha="0.65"
                     android:textColor="@color/colorBlack"
@@ -187,7 +200,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:textColor="@color/colorBlack"
                     android:text="Divison"
                     android:textSize="14dp"
@@ -197,8 +210,8 @@
                     android:id="@+id/divisionTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:text="A"
+                    android:layout_weight="0.5"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:alpha="0.65"
                     android:textColor="@color/colorBlack"
@@ -206,13 +219,16 @@
 
             </LinearLayout>
 
-
+            <View
+                android:layout_margin="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLightGrey"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
@@ -224,7 +240,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="15dp"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp">
 

@@ -79,7 +79,8 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder>
                 }
             }
             if (date.equals(CalendarUtils.selectedDate))
-                holder.parentView.setBackgroundColor(Color.rgb(205,158,160));
+               // holder.parentView.setBackgroundColor(Color.rgb(205,158,160));
+                holder.parentView.setBackgroundColor(Color.rgb(179, 177, 177));
         }
     }
 

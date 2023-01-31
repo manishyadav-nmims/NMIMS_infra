@@ -169,33 +169,27 @@ public class StudentWeekView extends AppCompatActivity implements CalendarAdapte
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setCancelable(true);
             dialog.setContentView(R.layout.timetable_design_details);
-            final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
+            /*final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
             titleTv.setText(list.start_time);
-            Log.d("startTime",list.start_time.toString());
+            Log.d("startTime",list.start_time.toString());*/
 
             final TextView roomNoTv = (TextView) dialog.findViewById(R.id.roomNoTv);
             roomNoTv.setText(list.room_no);
-            Log.d("startTime",list.room_no.toString());
 
             final TextView startTimeTv = (TextView) dialog.findViewById(R.id.startTimeTv);
             startTimeTv.setText(list.start_time);
-            Log.d("startTime",list.start_time.toString());
 
             final TextView endTimeTv = (TextView) dialog.findViewById(R.id.endTimeTv);
             endTimeTv.setText(list.end_time);
-            Log.d("startTime",list.end_time.toString());
 
             final TextView semesterTv = (TextView) dialog.findViewById(R.id.semesterTv);
             semesterTv.setText(list.acad_session);
-            Log.d("startTime",list.acad_session.toString());
 
             final TextView divisionTv = (TextView) dialog.findViewById(R.id.divisionTv);
             divisionTv.setText(list.division);
-            Log.d("startTime",list.division.toString());
 
             final TextView courseDetailsTv = (TextView) dialog.findViewById(R.id.courseDetailsTv);
             courseDetailsTv.setText(Html.fromHtml("<b> Course Details : " + list.event_name + "</b>"));
-            Log.d("event",list.event_name);
 
             dialog.show();
             Window window = dialog.getWindow();
