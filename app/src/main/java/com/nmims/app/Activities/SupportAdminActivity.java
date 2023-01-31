@@ -40,7 +40,7 @@ public class SupportAdminActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support_admin);
         dbHelper = new DBHelper(this);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         supportAdminName = findViewById(R.id.supportAdminName);
         supportAdminEmail = findViewById(R.id.supportAdminEmail);
         supportAdminUsername = findViewById(R.id.supportAdminUsername);

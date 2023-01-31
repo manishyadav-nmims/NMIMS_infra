@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
 
         /////////////////CHECK FOR CRASH///////////////
 

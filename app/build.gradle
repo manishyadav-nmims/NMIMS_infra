@@ -40,6 +40,9 @@ android {
     }
     signingConfigs{
         release {
+            //enableV1Signing false
+            v1SigningEnabled false
+            //enableV2Signing true
             v2SigningEnabled true
         }
     }
@@ -48,6 +51,7 @@ android {
             minifyEnabled false
             multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
         debug{
 

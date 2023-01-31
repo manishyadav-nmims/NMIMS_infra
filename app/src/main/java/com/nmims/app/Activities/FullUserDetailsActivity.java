@@ -28,7 +28,7 @@ public class FullUserDetailsActivity extends AppCompatActivity implements View.O
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_user_details);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Full User Details");
 

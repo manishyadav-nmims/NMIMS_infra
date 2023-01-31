@@ -78,7 +78,7 @@ public class FindDetailsByAdminActivity extends AppCompatActivity {
         dbHelper = new DBHelper(this);
         myApiUrlLms = dbHelper.getBackEndControl("myApiUrlLms").getValue();
         //myApiUrlLms = Config.myApiUrlLms;
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         myApiUrlUsermgmt = dbHelper.getBackEndControl("myApiUrlUsermgmt").getValue();
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

@@ -836,11 +836,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (isEmulator()){
-            showAlertDialogAndExitApp("This app doesn't work with emulator.");
+           // showAlertDialogAndExitApp("This app doesn't work with emulator.");
         }
 
         if(new DeviceUtils().isDeviceRooted(getApplicationContext())){
-            showAlertDialogAndExitApp("This device is rooted. You can't use this app.");
+           // showAlertDialogAndExitApp("This device is rooted. You can't use this app.");
         }
     }
 
