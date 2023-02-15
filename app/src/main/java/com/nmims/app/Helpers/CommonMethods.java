@@ -58,37 +58,39 @@ public class CommonMethods extends HurlStack {
             e.printStackTrace();
         }
     }
-    @SuppressLint("TrulyRandom")
-    public static void handleSSLHandshake() {
-        TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                X509Certificate[] myTrustedAnchors = new X509Certificate[0];
-                return myTrustedAnchors;
-            }
-            public void checkClientTrusted(X509Certificate[] certs, String authType) {
-                try {
-                    certs[0].checkValidity();
-                } catch (Exception e) {
-                    try {
-                        throw new CertificateException("Certificate not valid or trusted.");
-                    } catch (CertificateException ex) {
-                        ex.printStackTrace();
-                    }
-                }
-            }
-            public void checkServerTrusted(X509Certificate[] certs, String authType) {
-                try {
-                    certs[0].checkValidity();
-                } catch (Exception e) {
-                    try {
-                        throw new CertificateException("Certificate not valid or trusted.");
-                    } catch (CertificateException ex) {
-                        ex.printStackTrace();
-                    }
-                }
 
-            }
-        } };
+    public static void handleSSLHandshake() {
+        TrustManager[] victimizedManager = new TrustManager[]{
+
+                new X509TrustManager() {
+
+                    public X509Certificate[] getAcceptedIssuers() {
+
+                        X509Certificate[] myTrustedAnchors = new X509Certificate[0];
+
+                        return myTrustedAnchors;
+                    }
+
+                    @Override
+                    public void checkClientTrusted(X509Certificate[] certs, String authType) {
+                    }
+
+                    @Override
+                    public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                        if(chain == null || chain.length == 0)throw new IllegalArgumentException("Certificate is null or empty");
+                        if(authType == null || authType.length() == 0) throw new IllegalArgumentException("Authtype is null or empty");
+                        if(!authType.equalsIgnoreCase("ECDHE_RSA") &&
+                                !authType.equalsIgnoreCase("ECDHE_ECDSA") &&
+                                !authType.equalsIgnoreCase("RSA") &&
+                                !authType.equalsIgnoreCase("ECDSA")) throw new CertificateException("Certificate is not trust");
+                        try {
+                            chain[0].checkValidity();
+                        } catch (Exception e) {
+                            throw new CertificateException("Certificate is not valid or trusted");
+                        }
+                    }
+                }
+        };
         SSLContext sc = null;
         try {
             sc = SSLContext.getInstance("SSL");
@@ -96,7 +98,7 @@ public class CommonMethods extends HurlStack {
             e.printStackTrace();
         }
         try {
-            sc.init(null, trustAllCerts, new java.security.SecureRandom());
+           sc.init(null, victimizedManager, new java.security.SecureRandom());
         } catch (KeyManagementException e) {
             e.printStackTrace();
         }

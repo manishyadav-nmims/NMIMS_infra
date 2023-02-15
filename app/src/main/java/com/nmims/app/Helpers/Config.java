@@ -11,10 +11,11 @@ public class Config {
     public static final boolean PRINT_LOGS = true;
 
    //public static final String SERVER_TYPE = "LiveServer";
+  public static final String SERVER_TYPE = "LiveServers";
     //public static final String SERVER_TYPE="UATServer";
     //public static final String SERVER_TYPE = "TestServer";
     //public static final String SERVER_TYPE = "LocalServer";
-    public static final String SERVER_TYPE="LocalServer1";
+    //public static final String SERVER_TYPE="LocalServer1";
 
     public static final String DATE_CURRENT_SESSION = "https://asmsoc-mum.timetable.svkm.ac.in:3000/";
 }

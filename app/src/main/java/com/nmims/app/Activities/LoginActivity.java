@@ -1,6 +1,5 @@
 package com.nmims.app.Activities;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -29,7 +28,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.view.ActionMode;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -69,19 +67,10 @@ import org.json.JSONObject;
 import java.net.ConnectException;
 import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
-import java.security.SecureRandom;
-import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 
 public class LoginActivity extends AppCompatActivity {
     EditText editTextSapId;
@@ -249,13 +238,12 @@ public class LoginActivity extends AppCompatActivity {
     public void onLogin()
     {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
         String URL = myApiUrlUsermgmt + "authenticateUserForApp";
        //String URL ="https://portal.svkm.ac.in/usermgmt/authenticateUserForApp";
         new MyLog(NMIMSApplication.getAppContext()).debug("url ", URL);
         final UserDataModel userDataModel = new UserDataModel();
         try {
-            requestQueue = Volley.newRequestQueue(getApplicationContext());
+            requestQueue = Volley.newRequestQueue(LoginActivity.this);
             Map<String, Object> mapJ = new HashMap<String, Object>();
             mapJ.put("username", sapid);
             mapJ.put("password", password);

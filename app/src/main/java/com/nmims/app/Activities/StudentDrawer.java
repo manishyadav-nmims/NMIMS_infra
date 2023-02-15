@@ -50,12 +50,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.database.BuildConfig;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.nmims.app.BuildConfig;
 import com.nmims.app.Fragments.Academic.AnnoucementsFragment;
 import com.nmims.app.Fragments.Academic.DownloadFragment;
 import com.nmims.app.Fragments.Academic.ExamTimeTableFragment;
@@ -604,7 +604,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
 
     private void checkAppVersion() {
         try {
-            currentVersion = BuildConfig.VERSION_NAME.replace(".", "");
+            currentVersion = BuildConfig.VERSION_NAME.replace(".","");
             new MyLog(NMIMSApplication.getAppContext()).debug("currentVersion", currentVersion);
 
             databaseReference.child("Update").child("Student").addValueEventListener(new ValueEventListener() {

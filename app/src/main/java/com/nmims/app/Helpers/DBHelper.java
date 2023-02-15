@@ -932,7 +932,6 @@ public class DBHelper extends SQLiteOpenHelper {
                             cursor.getString(cursor.getColumnIndex("locallySubmitted")));
                 }
             }
-
             cursor.close();
             return surveyName;
         }
