@@ -78,7 +78,7 @@ public class SchoolAttendanceDataCheckActivity extends AppCompatActivity impleme
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_school_attendance_data_check);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("School Attendance");
         dbHelper = new DBHelper(SchoolAttendanceDataCheckActivity.this);

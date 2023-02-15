@@ -221,8 +221,8 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
                              dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                              dialog.setCancelable(true);
                              dialog.setContentView(R.layout.timetable_design_details);
-                             final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
-                             titleTv.setText(list.start_time);
+                             /*final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
+                             titleTv.setText(list.start_time);*/
 
                              final TextView roomNoTv = (TextView) dialog.findViewById(R.id.roomNoTv);
                              roomNoTv.setText(list.room_no);
@@ -264,8 +264,8 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
                          dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                          dialog.setCancelable(true);
                          dialog.setContentView(R.layout.timetable_design_details);
-                         final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
-                         titleTv.setText(list.start_time);
+                         /*final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
+                         titleTv.setText(list.start_time);*/
 
                          final TextView roomNoTv = (TextView) dialog.findViewById(R.id.roomNoTv);
                          roomNoTv.setText(list.room_no);
@@ -296,8 +296,8 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
                      dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                      dialog.setCancelable(true);
                      dialog.setContentView(R.layout.timetable_design_details);
-                     final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
-                     titleTv.setText(list.start_time);
+                    /* final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
+                     titleTv.setText(list.start_time);*/
 
                      final TextView roomNoTv = (TextView) dialog.findViewById(R.id.roomNoTv);
                      roomNoTv.setText(list.room_no);
@@ -344,8 +344,8 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
              dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
              dialog.setCancelable(true);
              dialog.setContentView(R.layout.timetable_design_details);
-             final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
-             titleTv.setText(list.start_time);
+             /*final TextView titleTv = (TextView) dialog.findViewById(R.id.titleTv);
+             titleTv.setText(list.start_time);*/
 
              final TextView roomNoTv = (TextView) dialog.findViewById(R.id.roomNoTv);
              roomNoTv.setText(list.room_no);

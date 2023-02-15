@@ -77,7 +77,7 @@ public class TestDetailsActivity extends AppCompatActivity implements TestDetail
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_details);
-       // CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         dbHelper = new DBHelper(this);
         myApiUrlLms = dbHelper.getBackEndControl("myApiUrlLms").getValue();
         //myApiUrlLms = Config.myApiUrlLms;

@@ -87,7 +87,7 @@ public class CoursesFragment extends Fragment
         programId = bundle.getString("programId");
         ((FacultyDrawer)getActivity()).setActionBarTitle("Courses");
         ((FacultyDrawer)getActivity()).showShuffleBtn(false);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         //////////ADDING FIREBASE EVENTS///////////////
         FirebaseAnalytics mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
         Bundle params = new Bundle();

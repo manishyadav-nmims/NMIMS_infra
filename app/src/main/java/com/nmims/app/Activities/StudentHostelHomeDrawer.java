@@ -87,7 +87,7 @@ public class StudentHostelHomeDrawer extends AppCompatActivity implements Naviga
         dbHelper = new DBHelper(this);
         Calendar calendar = Calendar.getInstance();
         String currentDate  =  new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).format(calendar.getTime());
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         try
         {
             MyDate myDate = dbHelper.getMyDate(1);

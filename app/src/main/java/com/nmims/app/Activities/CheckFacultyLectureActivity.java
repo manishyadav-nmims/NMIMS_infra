@@ -80,7 +80,7 @@ public class CheckFacultyLectureActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_faculty_lecture);
-       // CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         dbHelper = new DBHelper(this);
         myApiUrlLms = dbHelper.getBackEndControl("myApiUrlLms").getValue();
         //myApiUrlLms = Config.myApiUrlLms;

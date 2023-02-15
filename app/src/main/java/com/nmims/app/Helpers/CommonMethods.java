@@ -18,11 +18,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
-
-import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.text.ParseException;
@@ -61,18 +58,39 @@ public class CommonMethods extends HurlStack {
             e.printStackTrace();
         }
     }
-    @SuppressLint("TrulyRandom")
+
     public static void handleSSLHandshake() {
-        TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                X509Certificate[] myTrustedAnchors = new X509Certificate[0];
-                return myTrustedAnchors;
-            }
-            public void checkClientTrusted(X509Certificate[] certs, String authType) {
-            }
-            public void checkServerTrusted(X509Certificate[] certs, String authType) {
-            }
-        } };
+        TrustManager[] victimizedManager = new TrustManager[]{
+
+                new X509TrustManager() {
+
+                    public X509Certificate[] getAcceptedIssuers() {
+
+                        X509Certificate[] myTrustedAnchors = new X509Certificate[0];
+
+                        return myTrustedAnchors;
+                    }
+
+                    @Override
+                    public void checkClientTrusted(X509Certificate[] certs, String authType) {
+                    }
+
+                    @Override
+                    public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                        if(chain == null || chain.length == 0)throw new IllegalArgumentException("Certificate is null or empty");
+                        if(authType == null || authType.length() == 0) throw new IllegalArgumentException("Authtype is null or empty");
+                        if(!authType.equalsIgnoreCase("ECDHE_RSA") &&
+                                !authType.equalsIgnoreCase("ECDHE_ECDSA") &&
+                                !authType.equalsIgnoreCase("RSA") &&
+                                !authType.equalsIgnoreCase("ECDSA")) throw new CertificateException("Certificate is not trust");
+                        try {
+                            chain[0].checkValidity();
+                        } catch (Exception e) {
+                            throw new CertificateException("Certificate is not valid or trusted");
+                        }
+                    }
+                }
+        };
         SSLContext sc = null;
         try {
             sc = SSLContext.getInstance("SSL");
@@ -80,7 +98,7 @@ public class CommonMethods extends HurlStack {
             e.printStackTrace();
         }
         try {
-            sc.init(null, trustAllCerts, new java.security.SecureRandom());
+           sc.init(null, victimizedManager, new java.security.SecureRandom());
         } catch (KeyManagementException e) {
             e.printStackTrace();
         }
@@ -88,6 +106,7 @@ public class CommonMethods extends HurlStack {
         // Create all-trusting host name verifier
         HostnameVerifier allHostsValid = new HostnameVerifier() {
             public boolean verify(String hostname, SSLSession session) {
+                //Log.d("hostname",hostname);
                 if (!"https://portal.svkm.ac.in1".equalsIgnoreCase(hostname)) {
                     return true;
                 } else {

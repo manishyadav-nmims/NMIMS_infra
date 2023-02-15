@@ -1,6 +1,7 @@
 package com.nmims.app.Fragments.Academic;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -41,6 +42,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.nmims.app.Activities.FacultyDrawer;
 import com.nmims.app.Helpers.AESEncryption;
+import com.nmims.app.Helpers.CommonMethods;
 import com.nmims.app.Helpers.Config;
 import com.nmims.app.Helpers.DBHelper;
 import com.nmims.app.Helpers.MyLog;
@@ -146,7 +148,7 @@ public class FacultyHomeFragment extends Fragment
         supportic = view.findViewById(R.id.supportic);
         facultyNotific = view.findViewById(R.id.facultyNotific);
         facultyNotiftv = view.findViewById(R.id.facultyNotiftv);
-
+        CommonMethods.handleSSLHandshake();
         Cursor cursor = dbHelper.getUserDataValues();
         if (cursor!= null)
         {
@@ -670,7 +672,7 @@ public class FacultyHomeFragment extends Fragment
                         }
                         else
                         {
-                            card_workload.setVisibility(View.VISIBLE);
+                            card_workload.setVisibility(View.GONE);
                         }
                     }
                 }
@@ -810,7 +812,6 @@ public class FacultyHomeFragment extends Fragment
                                 if(currObj.has("studentCourseAttendanceList"))
                                 {
                                     studentCourseAttendanceList = currObj.getString("studentCourseAttendanceList");
-                                    new MyLog(getContext()).debug("studentCourseAttendanceList "+i,studentCourseAttendanceList);
 
                                     JSONArray jsonArrayStud = new JSONArray(studentCourseAttendanceList);
                                     for(int s=0; s < jsonArrayStud.length(); s++)
@@ -847,7 +848,6 @@ public class FacultyHomeFragment extends Fragment
                                             attendanceFlag = "Y";
                                             isAttendanceSubmitted = "Y";
                                         }
-
                                         dbHelper.insertStudentData( new AttendanceStudentDataModel(studentName, studentUsername, studentRollNo, studentStatus, courseIdStud, isMarked, start_time, end_time, isAttendanceSubmitted, currentDate, LECTURE_ID,attendanceSign, attendanceFlag, sharedPrefschoolName, "N",createdDate, lastModifiedDate));
                                     }
                                 }
@@ -863,7 +863,6 @@ public class FacultyHomeFragment extends Fragment
                                     progressDialog.dismiss();
                                     ((FacultyDrawer) getActivity()).setDrawerEnabled(true);
                                     String currentDateTime  =  new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH).format(calendar.getTime());
-                                    new MyLog(getContext()).debug("hideCardTime",currentDateTime);
                                     new MyToast(getContext()).showSmallCustomToast("Attendance data stored offline successfully...");
                                 }
                             });
@@ -1202,8 +1201,6 @@ public class FacultyHomeFragment extends Fragment
                                 }
 
                                 new MyLog(getContext()).debug("FH_presentFacultyId "+String.valueOf(i)+" ",presentFacultyId);
-
-
                                 dbHelper.insertLectureData(new LecturesDataModel(randomKey+"_"+class_date,facultyId, flag, classDateAfter, start_time, end_time, courseId, courseName, programId, programName, maxEndTimeForCourse, currentDate, schoolName,event_id, allotted_lectures, conducted_lectures, remaining_lectures,presentFacultyId));
 
                                 if(currObj.has("courseList"))
@@ -1332,8 +1329,6 @@ public class FacultyHomeFragment extends Fragment
                     headers.put("username", username);
                     return headers;
                 }
-
-
             };
             stringRequest.setRetryPolicy(new DefaultRetryPolicy(30000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             requestQueue.add(stringRequest);
@@ -1341,7 +1336,7 @@ public class FacultyHomeFragment extends Fragment
         catch (Exception e)
         {
             progressDialog.hide();
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
             alertDialogBuilder.setTitle("Error");
             alertDialogBuilder.setMessage("Something went wrong");
             alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

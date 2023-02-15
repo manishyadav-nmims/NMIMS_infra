@@ -71,7 +71,7 @@ public class ResetPasswordByAdminActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password_by_admin);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Reset Password");
 

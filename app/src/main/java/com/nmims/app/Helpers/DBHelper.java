@@ -237,7 +237,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void insertBackendControl(BackendModel backendModel)
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        String sql = "insert into backend_control (key , value) values ('"+backendModel.getKey()+"','"+backendModel.getValue()+"')";
+        String sql = "insert into backend_control ('key' , value) values ('"+backendModel.getKey()+"','"+backendModel.getValue()+"')";
         db.execSQL(sql);
         db.close();
         new MyLog(NMIMSApplication.getAppContext()).debug("insertBackendControl", sql);
@@ -459,8 +459,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public long getMultipleFacultySchoolCount()
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor= db.rawQuery("select count(*) from backend_control where (key = 'multipleFacultySchool' AND key IS NOT NULL)   "
-                , new String[] { });
+        Cursor cursor= db.rawQuery("select count(*) from backend_control where ('key' = 'multipleFacultySchool' AND 'key' IS NOT NULL) ", new String[] { });
         int count = 0;
         if(null != cursor)
             if(cursor.getCount() > 0)
@@ -502,7 +501,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public long getServerAddressCount()
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor= db.rawQuery("select count(*) from backend_control where (key = 'myApiUrlUsermgmt' AND key IS NOT NULL) OR (key = 'myApiUrlLms' AND key IS NOT NULL) OR (key = 'myApiUrlUsermgmtCrud' AND key IS NOT NULL) OR (key = 'myApiUrlSurvey' AND key IS NOT NULL)  or ((key = 'saltKey' AND key IS NOT NULL) or (key = 'secretKey' AND key IS NOT NULL) )"
+        Cursor cursor= db.rawQuery("select count(*) from backend_control where ('key' = 'myApiUrlUsermgmt' AND 'key' IS NOT NULL) OR ('key' = 'myApiUrlLms' AND 'key' IS NOT NULL) OR ('key' = 'myApiUrlUsermgmtCrud' AND 'key' IS NOT NULL) OR ('key' = 'myApiUrlSurvey' AND 'key' IS NOT NULL)  or (('key' = 'saltKey' AND 'key' IS NOT NULL) or ('key' = 'secretKey' AND 'key' IS NOT NULL) )"
                 , new String[] { });
         int count = 0;
         if(null != cursor)
@@ -896,7 +895,6 @@ public class DBHelper extends SQLiteOpenHelper {
                             cursor.getString(cursor.getColumnIndex("value")));
                 }
             }
-
             cursor.close();
             return backendModel;
         }
@@ -934,7 +932,6 @@ public class DBHelper extends SQLiteOpenHelper {
                             cursor.getString(cursor.getColumnIndex("locallySubmitted")));
                 }
             }
-
             cursor.close();
             return surveyName;
         }
@@ -2350,6 +2347,21 @@ public class DBHelper extends SQLiteOpenHelper {
             new MyLog(NMIMSApplication.getAppContext()).debug("deleteMyDate", e.getMessage());
         }
     }
+    public void deleteuserData()
+    {
+        try
+        {
+            SQLiteDatabase db = this.getWritableDatabase();
+            String truncateTable = "DELETE FROM userData";
+            db.execSQL(truncateTable);
+            String truncateTableBE = "DELETE FROM backend_control";
+            db.execSQL(truncateTableBE);
+        }
+        catch (Exception e)
+        {
+            new MyLog(NMIMSApplication.getAppContext()).debug("deleteMyDate", e.getMessage());
+        }
+    }
 
     public void deleteTestDetails()
     {
@@ -2675,8 +2687,7 @@ public class DBHelper extends SQLiteOpenHelper {
         try
         {
             SQLiteDatabase db = this.getWritableDatabase();
-            String sql = "DELETE FROM backend_control where (key = 'myApiUrlUsermgmt') OR (key = 'myApiUrlLms') OR (key = 'myApiUrlUsermgmtCrud') OR  (key = 'myApiUrlSurvey') OR  (key = 'saltKey') OR  (key = 'secretKey')";
-            new MyLog(NMIMSApplication.getAppContext()).debug("deleteServerAddressFromBackEndControl",sql);
+            String sql = "DELETE FROM backend_control where ('key' = 'myApiUrlUsermgmt') OR ('key' = 'myApiUrlLms') OR ('key' = 'myApiUrlUsermgmtCrud') OR  ('key' = 'myApiUrlSurvey') OR  ('key' = 'saltKey') OR  ('key' = 'secretKey')";
             db.execSQL(sql);
             db.close();
         }

@@ -135,8 +135,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
         //myApiUrlLms = Config.myApiUrlLms;
         myApiUrlSurvey = dbHelper.getBackEndControl("myApiUrlSurvey").getValue();
         /////////////////CHECK FOR CRASH///////////////
-
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         /////////////////CHECK FOR CRASH///////////////
@@ -478,11 +477,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            SQLiteDatabase db = dbHelper.getWritableDatabase();
-                            String truncateTable = "DELETE FROM userData";
-                            db.execSQL(truncateTable);
-                            String truncateTableBE = "DELETE FROM backend_control";
-                            db.execSQL(truncateTableBE);
+                            dbHelper.deleteuserData();
                             dbHelper.deleteMyDate();
                             deletePlayerId();
                             dbHelper.deleteMyNotification();
@@ -509,12 +504,8 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
                 }
             } else {
                 deletePlayerId();
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                String truncateTable = "DELETE FROM userData";
-                db.execSQL(truncateTable);
-                String truncateTableBE = "DELETE FROM backend_control";
-                db.execSQL(truncateTableBE);
                 DBHelper dbHelper = new DBHelper(this);
+                dbHelper.deleteuserData();
                 dbHelper.deleteMyDate();
                 dbHelper.deleteMyNotification();
                 dbHelper.deleteAssignmentData();
@@ -613,7 +604,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
 
     private void checkAppVersion() {
         try {
-            currentVersion = BuildConfig.VERSION_NAME.replace(".", "");
+            currentVersion = BuildConfig.VERSION_NAME.replace(".","");
             new MyLog(NMIMSApplication.getAppContext()).debug("currentVersion", currentVersion);
 
             databaseReference.child("Update").child("Student").addValueEventListener(new ValueEventListener() {
@@ -1096,11 +1087,7 @@ public class StudentDrawer extends AppCompatActivity implements NavigationView.O
         alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                String truncateTable = "DELETE FROM userData";
-                db.execSQL(truncateTable);
-                String truncateTableBE = "DELETE FROM backend_control";
-                db.execSQL(truncateTableBE);
+                dbHelper.deleteuserData();
                 dbHelper.deleteMyDate();
                 dbHelper.deleteMyNotification();
                 dbHelper.deleteAssignmentData();

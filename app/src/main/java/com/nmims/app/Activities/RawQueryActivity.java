@@ -57,7 +57,7 @@ public class RawQueryActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raw_query);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         prepareSchoolList();

@@ -44,7 +44,7 @@ public class SendDataActivity extends AppCompatActivity implements SendAttendanc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_data);
         prepareSchoolList();
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         progressDialog = new ProgressDialog(this);
         responseLayout = findViewById(R.id.responseLayout);
         note_ = findViewById(R.id.note_);

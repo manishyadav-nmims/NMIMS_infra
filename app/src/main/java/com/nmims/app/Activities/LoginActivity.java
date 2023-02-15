@@ -1,6 +1,5 @@
 package com.nmims.app.Activities;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -10,6 +9,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -28,7 +28,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.view.ActionMode;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -53,6 +52,7 @@ import com.nmims.app.Helpers.AESEncryption;
 import com.nmims.app.Helpers.CommonMethods;
 import com.nmims.app.Helpers.Config;
 import com.nmims.app.Helpers.DBHelper;
+import com.nmims.app.Helpers.DeviceUtils;
 import com.nmims.app.Helpers.MyLog;
 import com.nmims.app.Helpers.MyToast;
 import com.nmims.app.Helpers.NMIMSApplication;
@@ -67,19 +67,10 @@ import org.json.JSONObject;
 import java.net.ConnectException;
 import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
-import java.security.SecureRandom;
-import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 
 public class LoginActivity extends AppCompatActivity {
     EditText editTextSapId;
@@ -97,6 +88,8 @@ public class LoginActivity extends AppCompatActivity {
     private DBHelper dbHelper;
     private DatabaseReference databaseReference;
     private AESEncryption aes;
+    private RequestQueue requestQueue;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(databaseHelper.getMultipleFacultySchoolCount() < 1)
         {
+            databaseHelper.deleteuserData();
             databaseHelper.insertBackendControl(new BackendModel("multipleFacultySchool","BSSA-NM-M"));
         }
         aes = new AESEncryption(LoginActivity.this);
@@ -244,24 +238,20 @@ public class LoginActivity extends AppCompatActivity {
     public void onLogin()
     {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-       String URL = myApiUrlUsermgmt + "authenticateUserForApp";
-      // String URL ="https://portal.svkm.ac.in/usermgmt/authenticateUserForApp";
+        String URL = myApiUrlUsermgmt + "authenticateUserForApp";
+       //String URL ="https://portal.svkm.ac.in/usermgmt/authenticateUserForApp";
         new MyLog(NMIMSApplication.getAppContext()).debug("url ", URL);
         final UserDataModel userDataModel = new UserDataModel();
         try {
-            requestQueue = Volley.newRequestQueue(getApplicationContext());
+            requestQueue = Volley.newRequestQueue(LoginActivity.this);
             Map<String, Object> mapJ = new HashMap<String, Object>();
             mapJ.put("username", sapid);
             mapJ.put("password", password);
             final String mRequestBody = aes.encryptMap(mapJ);
             Log.d("mRequestBody---1",mRequestBody.toString());
-            new MyLog(LoginActivity.this).debug("mRequestBody",mRequestBody);
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String resp) {
-
-                    Log.d("inside","----->");
 
                     try {
                         progressDialog.dismiss();
@@ -335,9 +325,6 @@ public class LoginActivity extends AppCompatActivity {
                                 roleListString = roleListString + "," + roles.getString(i);
                             }
                         }
-                        new MyLog(NMIMSApplication.getAppContext()).debug("schoolList", schoolListString);
-                        new MyLog(NMIMSApplication.getAppContext()).debug("currentSchool", currentSchool);
-                        new MyLog(NMIMSApplication.getAppContext()).debug("roleList", roleListString);
                         String email = "", mobile = "", firstname ="", lastname ="", user_image = "", token = "";
                         if(response.has("email"))
                         {
@@ -558,16 +545,20 @@ public class LoginActivity extends AppCompatActivity {
         {
             Dialog dialog = new Dialog(this);
             dialog.setContentView(R.layout.forgot_password_dialog);
-            final TextView enterSapID = dialog.findViewById(R.id.enterSapID);
+            dialog.show();
             Button resetPasswordButton = dialog.findViewById(R.id.resetPassword);
-            sapid = enterSapID.getText().toString().trim();
             resetPasswordButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
                 {
-                    if(!sapIdForPasswordChange.equals(""))
+                    TextView enterSapID = dialog.findViewById(R.id.enterSapID);
+                    String ResetSapId = enterSapID.getText().toString().trim();
+                    if(!ResetSapId.equals(""))
                     {
-                        changePassword();
+                       /* Intent intent=new Intent(LoginActivity.this,VerifyOTPActivity.class);
+                        startActivity(intent);
+                        finish();*/
+                        changePassword(ResetSapId);
                     }
                     else
                     {
@@ -575,8 +566,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
             });
-
-            dialog.show();
         }
         catch (Exception e)
         {
@@ -683,15 +672,238 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private void changePassword()
+    private void changePassword(String username)
     {
         try
         {
+            progressDialog.setMessage("Sending OTP...Please wait");
+            progressDialog.show();
+            progressDialog.setCancelable(false);
+            String URL = myApiUrlUsermgmt +"sendOtpForApp";
+            //String URL = "http://10.130.34.107:8080/" +"sendOtpForApp";
+            Log.d("sendOtpForAppURL",URL);
+            requestQueue = Volley.newRequestQueue(getApplication());
+            Map<String, Object> mapJ = new HashMap<String, Object>();
+            mapJ.put("username",username);
+            final String mRequestBody = aes.encryptMap(mapJ);
+            Log.d("decrypt",mapJ.toString());
+            new MyLog(NMIMSApplication.getAppContext()).debug("mRequestBodyCP",mRequestBody);
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>()
+            {
+                @Override
+                public void onResponse(String response)
+                {
+                    String respStr = aes.decrypt(response);
+                    try
+                    {
+                        JSONObject jsonResponseObj = new JSONObject(respStr);
+                        boolean status = false;
+                        String error ="";
+                        String mesg="";
+                        if(jsonResponseObj.has("success"))
+                        {
+                            status = jsonResponseObj.getBoolean("success");
+                            mesg=jsonResponseObj.getString("message");
 
+                            new MyLog(NMIMSApplication.getAppContext()).debug("Update Password Status",status + "");
+                            if(status)
+                            {
+                                progressDialog.dismiss();
+                                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
+                                alertDialogBuilder.setTitle("Success");
+                                alertDialogBuilder.setMessage(mesg);
+                                alertDialogBuilder.setCancelable(false);
+                                alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        Intent intent=new Intent(LoginActivity.this,VerifyOTPActivity.class);
+                                        intent.putExtra("username",username);
+                                        startActivity(intent);
+                                        dialog.dismiss();
+                                    }
+                                });
+                                alertDialogBuilder.show();
+
+                            }
+                            if(!status)
+                            {
+                                progressDialog.dismiss();
+                                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
+                                alertDialogBuilder.setTitle("FAIL");
+                                alertDialogBuilder.setMessage(mesg);
+                                alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                    }
+                                });
+                                alertDialogBuilder.show();
+                            }
+                        }
+                        if(jsonResponseObj.has("errorMsg"))
+                        {
+                            progressDialog.dismiss();
+                            error = jsonResponseObj.getString("errorMsg");
+                            new MyLog(NMIMSApplication.getAppContext()).debug("U_P Failed Error",error);
+
+                            showUpdateDialog("Error",error);
+                        }
+                    }
+                    catch(Exception je)
+                    {
+                        new MyLog(NMIMSApplication.getAppContext()).debug("JSonException",je.getMessage());
+                        progressDialog.dismiss();
+                        showUpdateDialog("Error",je.getMessage());
+                    }
+                }
+            }, new Response.ErrorListener()
+            {
+                @Override
+                public void onErrorResponse(VolleyError error)
+                {
+                    progressDialog.hide();
+                    new MyLog(LoginActivity.this).debug("LOG_VOLLEY", error.toString());
+
+                    if (error instanceof TimeoutError)
+                    {
+                        showUpdateDialog("Error","Oops! Connection timeout error!");
+                    }
+                    else if (error.getCause() instanceof ConnectException)
+                    {
+                        showUpdateDialog("Error","Oops! Unable to reach server!");
+                    }
+
+                    else if (error instanceof NoConnectionError)
+                    {
+                        showUpdateDialog("Error","Oops! No Internet Connection Available!");
+                    }
+
+                    else if (error.getCause() instanceof SocketException)
+                    {
+                        showUpdateDialog("Error","Oops! We are Sorry Something went wrong. We're working on it now!");
+                    }
+                    else if (error instanceof AuthFailureError)
+                    {
+                        showUpdateDialog("Error","Oops! Server couldn't find the authenticated request!");
+                    }
+                    else if (error instanceof ServerError)
+                    {
+                        showUpdateDialog("Error","Oops! No response from server!");
+                    }
+                    else if (error instanceof NetworkError)
+                    {
+                        showUpdateDialog("Error","Oops! It seems your internet is slow!");
+                    }
+                    else if (error instanceof ParseError)
+                    {
+                        showUpdateDialog("Error","Oops! Parse Error (because of invalid json or xml)!");
+                    }
+                    else
+                    {
+                        showUpdateDialog("Error","Oops! An unknown error occurred!");
+                    }
+                }
+            }){
+                @Override
+                public String getBodyContentType() {
+                    return "application/json; charset=utf-8";
+                }
+
+                @Override
+                public byte[] getBody() throws AuthFailureError {
+                    return mRequestBody == null ? null : mRequestBody.getBytes(StandardCharsets.UTF_8);
+                }
+            };
+            stringRequest.setRetryPolicy(new DefaultRetryPolicy(15000,
+                    0,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            requestQueue.add(stringRequest);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (isEmulator()){
+           // showAlertDialogAndExitApp("This app doesn't work with emulator.");
+        }
+
+        if(new DeviceUtils().isDeviceRooted(getApplicationContext())){
+           // showAlertDialogAndExitApp("This device is rooted. You can't use this app.");
+        }
+    }
+
+    private boolean isEmulator() {
+        return (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
+                || Build.FINGERPRINT.startsWith("generic")
+                || Build.FINGERPRINT.startsWith("unknown")
+                || Build.HARDWARE.contains("goldfish")
+                || Build.HARDWARE.contains("ranchu")
+                || Build.MODEL.contains("google_sdk")
+                || Build.MODEL.contains("Emulator")
+                || Build.MODEL.contains("Android SDK built for x86")
+                || Build.MANUFACTURER.contains("Genymotion")
+                || Build.PRODUCT.contains("sdk_google")
+                || Build.PRODUCT.contains("google_sdk")
+                || Build.PRODUCT.contains("sdk")
+                || Build.PRODUCT.contains("sdk_x86")
+                || Build.PRODUCT.contains("sdk_gphone64_arm64")
+                || Build.PRODUCT.contains("vbox86p")
+                || Build.PRODUCT.contains("emulator")
+                || Build.PRODUCT.contains("simulator");
+    }
+
+
+    private void showUpdateDialog(final String Title, String Message)
+    {
+        try
+        {
+            progressDialog.dismiss();
+            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+            builder.setTitle(Title);
+            builder.setMessage(Message);
+            builder.setCancelable(false);
+            builder.setPositiveButton(
+                    "OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id)
+                        {
+                            dialog.cancel();
+                            if(Title.equalsIgnoreCase("Success"))
+                            {
+                                LoginActivity.this.onBackPressed();
+                            }
+                        }
+                    });
+
+            AlertDialog alert = builder.create();
+            alert.show();
         }
         catch (Exception e)
         {
-
+            e.printStackTrace();
         }
     }
+
+
+    public void showAlertDialogAndExitApp(String message) {
+
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setMessage(message);
+        alertDialog.setCancelable(false);
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+
+        alertDialog.show();
+    }
+
 }

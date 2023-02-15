@@ -103,7 +103,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
     private TextView noInternetWarning, app_versionTv_F;
     private DatabaseReference databaseReference;
     private int REQUEST_PERMISSIONS_CODE_WRITE_STORAGE = 6;
-    private String newVersion = "", currentVersion = "", forceUpdate = "", workLoad="",myApiUrlLms="", sharedPrefschoolName= "",
+    private String newVersion = "N", currentVersion = "C", forceUpdate = "", workLoad="",myApiUrlLms="", sharedPrefschoolName= "",
             selectedSchool="",currentDate="", currentTime="", syncFactor = "", token = "";
     private Menu menu;
     private FirebaseAnalytics mFirebaseAnalytics;
@@ -141,7 +141,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
         updateAttendanceSyncDataModelList = new ArrayList<>();
         allStudentList = new ArrayList<>();
         progressDialog = new ProgressDialog(FacultyDrawer.this);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
 
         /////////////////CHECK FOR CRASH///////////////
 
@@ -178,7 +178,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
             new MyLog(NMIMSApplication.getAppContext()).debug("Insert Date Exception", e.getMessage());
         }
 
-        app_versionTv_F.setText("Version : "+BuildConfig.VERSION_NAME);
+        app_versionTv_F.setText("Version : "+ BuildConfig.VERSION_NAME);
 
         //////////////////INTERNET CONNECTION////////////////////////////
 
@@ -491,13 +491,8 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
 
         else if (id == R.id.nav_logout)
         {
-
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
-            String truncateTable = "DELETE FROM userData";
-            db.execSQL(truncateTable);
-            String truncateTableBE = "DELETE FROM backend_control";
-            db.execSQL(truncateTableBE);
             DBHelper dbHelper = new DBHelper(FacultyDrawer.this);
+            dbHelper.deleteuserData();
             dbHelper.deleteMyDate();
             dbHelper.deleteMyNotification();
             dbHelper.deleteAllFacultyNotification();
@@ -1160,7 +1155,7 @@ public class FacultyDrawer extends AppCompatActivity implements NavigationView.O
             as++;
         }
 
-        /*if(logoutPermission)
+     /*   if(logoutPermission)
         {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             String truncateTable = "DELETE FROM userData";

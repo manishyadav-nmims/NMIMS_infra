@@ -25,7 +25,7 @@ public class FullTestDetailsActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_test_details);
-        //CommonMethods.handleSSLHandshake();
+        CommonMethods.handleSSLHandshake();
         ///////////Initialization//////////////////////////
         schoolNAmeTD = findViewById(R.id.schoolNAmeTD);
         idTD = findViewById(R.id.idTD);
